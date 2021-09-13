@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>dwd_fact_Close_panel_OrderDetail</name>
+    <description />
+    <extended_description />
+    <trans_version />
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection />
+        <schema />
+        <table />
+        <size_limit_lines />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject />
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection />
+        <schema />
+        <table />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection />
+      <table />
+      <field />
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file />
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2021/07/28 15:18:20.909</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2021/07/28 15:18:20.909</modified_date>
+    <key_for_session_key />
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>postgres</name>
+    <server>192.168.133.122</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>cj_datawarehouse</database>
+    <port>5432</port>
+    <username>mxadmin</username>
+    <password>Encrypted 2be98c2a91ed59b9caf1bff228dc6fa8c</password>
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+  </order>
+  <step>
+    <name>执行SQL脚本</name>
+    <type>ExecSQL</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>postgres</connection>
+    <execute_each_row>Y</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>set enable_nestloop =off;
+INSERT INTO dwd_fact_Close_panel_OrderDetail(  ID, Area, SvrCode, Year_Code, Quarter_Code, Month_Code, Week_Code, Rma,
+                                               Con, PPID, PN, SN, Return_RMA, ReturnTo, Commodity, Model_Status,
+                                               Date_SafeLunch, RMA_issue_Date, Receive_Date, Start_Date, Packing_Date, Close_Date,
+                                               TAT_Closed, TAT_Packing, Test_Result, Final_Result, NG_ErrorDesc, NG_Reason, ErrDesc_VFIR,
+                                               FailReason_VFIR, Panel_Reapir, Panel_Repair_type, Delay_Type, Delay_Reason, Delay_Category,
+                                               Submit_Date, Recover_Date, RequestRef, Platform, Return_times, SO, Service_tag, SCRAP, fResCode,
+                                               fsta, fVIMFunRes, LastID, Last_Closed_Date, ImportantNote, Last_ImportantNote, Last_ServiceTAG,
+                                               Last_RequestREF, Last_DelayCategory, Last_Delaytype, Last_Returnto, Date_Bad_Post, Returnto_Last)
+SELECT id,Area,SvrCode,Year_Code,Quarter_Code,Month_Code,Week_Code,RMA,Control,PPID,PN,SN,RETURNTO_RMA,RETURNTO,
+    Commodity,Model_Status,Date_SafeLunch,RMA_issue_Date,Receive_Date,Start_Date,Packing_Date,Close_Date,TAT_Closed,
+    TAT_Packing,Test_Result,Final_Result, NG_ErrorDesc,NG_Reason, ErrDesc_VFIR, FailReason_VFIR,Panel_Reapir,Panel_Repair_type, Delay_Type,Delay_Reason,
+    Delay_Category, Submit_Date, Recover_Date, RequestRef, Platform,Return_times, SO, Service_tag, SCRAP, fResCode, fsta,
+    fVIMRes, LastID, Last_Closed_Date, ImportantNote, Last_ImportantNote,Last_ServiceTAG, Last_RequestREF,
+    DelayCategory, Delaytype,Last_Returnto, Date_Bad_Post, Returnto_Last FROM
+    (select
+    case when bb.CustomerCode = 'DELL ARB' then 'ARB' else 'XM' end as Area,
+    pp.SvrCode, PP.id, cc.fym Year_Code , cc.fqm as Quarter_Code, cc.fmm Month_Code , cc.fwk Week_Code,
+    rma.fReturnTo as RETURNTO_RMA, PP.Returnto as RETURNTO, bb.Commodity,
+    RMA.fCon as Control, RMA.frma as RMA, PP.fpn as PN, PP.MonitorPPID AS PPID, PP.PPID as SN, dd.fModel as Modal, --rma.fSn as SN
+    case when dd.fsta in (6) THEN 'Safe Launch'  else 'NPI' end as Model_Status, --a1.FCodeName
+    dd.Date_SafeLunch as Date_SafeLunch, RMA.Cdate as RMA_issue_Date,
+    RMA.fRptDate as Receive_Date, to_date(null::text,'YYYY-MM-dd HH24:MI:SS[.f...]') as Start_Date,
+    PP.Date_Packing AS Packing_Date,
+    pp.Date_Closed as Close_Date , -1 as TAT_Closed  , -1 as TAT_Packing,
+    --case when ee.Disposition &lt;&gt; '' then ee.Disposition else  a2.FCodeName  end
+    '' as Test_Result,
+    '' Final_Result,
+    case when PP.fsta IN (29,39)  then PP.Error_VMI  ELSE '' end as NG_ErrorDesc,
+    case when pp.fsta IN (29,39)  then PP.Error_VMI  ELSE '' end as NG_Reason,
+    ee.fErrDesc as ErrDesc_VFIR, ee.fFailReason FailReason_VFIR,
+    case when PP.id > 0 then 'Y' else 'N' end  Panel_Reapir,  a7.FCodeName Panel_Repair_type,
+    f1.fCodeName as Delay_Type  , ff.fDesc Delay_Reason,
+    ff.fRemark Delay_Category, ff.Cdate as Submit_Date, ff.Date_Dis as Recover_Date,
+    RMA.fRequestREF as RequestRef, dd.Platform as Platform,
+    PP.ReturnTimes as Return_times, rma.fSo as SO, RMA.fSt as Service_tag ,
+    '' as Scrap , --ee.Scrap,
+    PP.fResCode , PP.fsta, PP.fResult_VMI as fVIMRes,PP.fResult,
+    PP.LastID, RR.Date_Closed as Last_Closed_Date, RMA.ImportantNote, RMA_RR.ImportantNote as Last_ImportantNote,
+    RMA_RR.fSt as  Last_ServiceTAG,   RMA_RR.fRequestREF as  Last_RequestREF,
+    '' DelayCategory, '' Delaytype, RMA_RR.fReturnTo as Last_Returnto, PP.date_closed as Date_Bad_Post,
+    RMA.Returnto_Last
+    --case when RR.Date_Closed &lt;&gt; '' then DATEDIFF(DAY, RR.Date_Closed, RMA.fRptDate) else 0 end AS Days_RR
+    from ods_ODM_RMA_ITEM PP
+    left outer join ods_cj_rmaitem RMA on RMA.Id = PP.OLDSYS_ID
+    inner join ods_wx_ReturnTo_Base bb on pp.Returnto = bb.ReturnTo AND CustomerCode in ('DELL', 'DELL ARB', 'DELL_PNA')
+    left outer join ods_Holidays cc on to_date(pp.Date_Closed::text,'YYYY-MM-dd') = to_date(cc.fsDate::text,'YYYY-MM-dd')
+    left outer join ods_ODM_PN_TPanel dd on dd.fPN = PP.fpn and dd.SvrCode = PP.SvrCode
+    --left outer join cj_code a1 on a1.FType = 56 and a1.FCode = dd.fmSta
+    left outer join ods_Screen_Disposition ee on ee.fScreenID = PP.id
+    left outer join ods_ODM_OnHold_Item ff on ff.id = pp.OnHoldID
+    left outer join ods_Base_ODM_OnHold f1 on ff.OnHoldType = f1.fcode
+    LEFT OUTER JOIN ods_cj_panel_code a2 ON a2.FType = 23 AND a2.FParent = '0' AND a2.FCode = pp.fResult_VMI
+    left outer join ods_cj_panel_code a7 on a7.FType = 23 and a7.FParent = '1' and a7.FCode = PP.PanelRepairType
+    left outer join ods_ODM_RMA_ITEM RR on RR.id = PP.LastID
+    left outer join ods_cj_rmaitem RMA_RR on RMA_RR.Id = RR.OLDSYS_ID
+    where PP.SvrCode in (205,218) and Fn_ODM_isClosedSta(PP.fsta)=1 and PP.fsta&lt;&gt;-10
+    and RMA.fReturnTo in (select ReturnTo from ods_wx_ReturnTo_Base where  CustomerCode in ('DELL', 'DELL ARB', 'DELL_PNA' ))
+    and pp.Date_Closed >= '2020-01-01'
+    and PP.updatetime::date=(now() - interval '1 day')::date) as tmp_panel;
+   
+update dwd_fact_Close_panel_OrderDetail aa
+    set SCRAP = cj_KPI_DELL_IsScrap(aa.returnto, aa.SvrCode, aa.fsta, aa.frescode, aa.fVIMFunRes, aa.fRepairRes, bb.Scrap)
+    ,   Test_Result = bb.Disposition
+    from ods_Screen_Disposition bb
+    where aa.SvrCode = 205 and  aa.Commodity = 'DT LCD'   and aa.Area in ('ARB', 'XM') -- and aa.SvrCode &lt;&gt; 70
+    and bb.fScreenID = aa.id and bb.fsta in (19,29)
+    and (  COALESCE(aa.SCRAP, '') &lt;&gt;  COALESCE(cj_KPI_DELL_IsScrap(aa.returnto, aa.SvrCode, aa.fsta, aa.frescode, aa.fVIMFunRes, aa.fRepairRes, bb.Scrap), '')
+         or  COALESCE(aa.Test_Result, '') &lt;&gt;  COALESCE(bb.Disposition, ''))
+    and aa.updatetime::date=(now() - interval '1 day')::date;
+
+SELECT Dell_KPI_days('dwd_fact_close_panel_orderdetail');--更新其他
+
+
+DELETE FROM dwd_fact_close_panel_orderdetail
+    WHERE ID in (SELECT a1.id  FROM dwd_fact_close_panel_orderdetail a1,dwd_fact_close_panel_orderdetail a2
+    where a1.Con=a2.Con and a1.updatetime&lt;a2.updatetime);</sql>
+    <set_params>N</set_params>
+    <insert_field />
+    <update_field />
+    <delete_field />
+    <read_field />
+    <arguments>
+    </arguments>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>592</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+</transformation>

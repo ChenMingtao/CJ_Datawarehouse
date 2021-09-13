@@ -1,0 +1,1522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job>
+  <name>kettle_job_dwd_fact</name>
+  <description />
+  <extended_description />
+  <job_version />
+  <directory>/</directory>
+  <created_user>-</created_user>
+  <created_date>2021/07/28 11:37:14.328</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2021/07/28 11:37:14.328</modified_date>
+  <parameters>
+    </parameters>
+  <connection>
+    <name>mxdb</name>
+    <server>192.168.133.122</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>cj_datawarehouse</database>
+    <port>5432</port>
+    <username>mxadmin</username>
+    <password>Encrypted 2be98c2a91ed59b9caf1bff228dc6fa8c</password>
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <slaveservers>
+    </slaveservers>
+  <job-log-table>
+    <connection />
+    <schema />
+    <table />
+    <size_limit_lines />
+    <interval />
+    <timeout_days />
+    <field>
+      <id>ID_JOB</id>
+      <enabled>Y</enabled>
+      <name>ID_JOB</name>
+    </field>
+    <field>
+      <id>CHANNEL_ID</id>
+      <enabled>Y</enabled>
+      <name>CHANNEL_ID</name>
+    </field>
+    <field>
+      <id>JOBNAME</id>
+      <enabled>Y</enabled>
+      <name>JOBNAME</name>
+    </field>
+    <field>
+      <id>STATUS</id>
+      <enabled>Y</enabled>
+      <name>STATUS</name>
+    </field>
+    <field>
+      <id>LINES_READ</id>
+      <enabled>Y</enabled>
+      <name>LINES_READ</name>
+    </field>
+    <field>
+      <id>LINES_WRITTEN</id>
+      <enabled>Y</enabled>
+      <name>LINES_WRITTEN</name>
+    </field>
+    <field>
+      <id>LINES_UPDATED</id>
+      <enabled>Y</enabled>
+      <name>LINES_UPDATED</name>
+    </field>
+    <field>
+      <id>LINES_INPUT</id>
+      <enabled>Y</enabled>
+      <name>LINES_INPUT</name>
+    </field>
+    <field>
+      <id>LINES_OUTPUT</id>
+      <enabled>Y</enabled>
+      <name>LINES_OUTPUT</name>
+    </field>
+    <field>
+      <id>LINES_REJECTED</id>
+      <enabled>Y</enabled>
+      <name>LINES_REJECTED</name>
+    </field>
+    <field>
+      <id>ERRORS</id>
+      <enabled>Y</enabled>
+      <name>ERRORS</name>
+    </field>
+    <field>
+      <id>STARTDATE</id>
+      <enabled>Y</enabled>
+      <name>STARTDATE</name>
+    </field>
+    <field>
+      <id>ENDDATE</id>
+      <enabled>Y</enabled>
+      <name>ENDDATE</name>
+    </field>
+    <field>
+      <id>LOGDATE</id>
+      <enabled>Y</enabled>
+      <name>LOGDATE</name>
+    </field>
+    <field>
+      <id>DEPDATE</id>
+      <enabled>Y</enabled>
+      <name>DEPDATE</name>
+    </field>
+    <field>
+      <id>REPLAYDATE</id>
+      <enabled>Y</enabled>
+      <name>REPLAYDATE</name>
+    </field>
+    <field>
+      <id>LOG_FIELD</id>
+      <enabled>Y</enabled>
+      <name>LOG_FIELD</name>
+    </field>
+    <field>
+      <id>EXECUTING_SERVER</id>
+      <enabled>N</enabled>
+      <name>EXECUTING_SERVER</name>
+    </field>
+    <field>
+      <id>EXECUTING_USER</id>
+      <enabled>N</enabled>
+      <name>EXECUTING_USER</name>
+    </field>
+    <field>
+      <id>START_JOB_ENTRY</id>
+      <enabled>N</enabled>
+      <name>START_JOB_ENTRY</name>
+    </field>
+    <field>
+      <id>CLIENT</id>
+      <enabled>N</enabled>
+      <name>CLIENT</name>
+    </field>
+  </job-log-table>
+  <jobentry-log-table>
+    <connection />
+    <schema />
+    <table />
+    <timeout_days />
+    <field>
+      <id>ID_BATCH</id>
+      <enabled>Y</enabled>
+      <name>ID_BATCH</name>
+    </field>
+    <field>
+      <id>CHANNEL_ID</id>
+      <enabled>Y</enabled>
+      <name>CHANNEL_ID</name>
+    </field>
+    <field>
+      <id>LOG_DATE</id>
+      <enabled>Y</enabled>
+      <name>LOG_DATE</name>
+    </field>
+    <field>
+      <id>JOBNAME</id>
+      <enabled>Y</enabled>
+      <name>TRANSNAME</name>
+    </field>
+    <field>
+      <id>JOBENTRYNAME</id>
+      <enabled>Y</enabled>
+      <name>STEPNAME</name>
+    </field>
+    <field>
+      <id>LINES_READ</id>
+      <enabled>Y</enabled>
+      <name>LINES_READ</name>
+    </field>
+    <field>
+      <id>LINES_WRITTEN</id>
+      <enabled>Y</enabled>
+      <name>LINES_WRITTEN</name>
+    </field>
+    <field>
+      <id>LINES_UPDATED</id>
+      <enabled>Y</enabled>
+      <name>LINES_UPDATED</name>
+    </field>
+    <field>
+      <id>LINES_INPUT</id>
+      <enabled>Y</enabled>
+      <name>LINES_INPUT</name>
+    </field>
+    <field>
+      <id>LINES_OUTPUT</id>
+      <enabled>Y</enabled>
+      <name>LINES_OUTPUT</name>
+    </field>
+    <field>
+      <id>LINES_REJECTED</id>
+      <enabled>Y</enabled>
+      <name>LINES_REJECTED</name>
+    </field>
+    <field>
+      <id>ERRORS</id>
+      <enabled>Y</enabled>
+      <name>ERRORS</name>
+    </field>
+    <field>
+      <id>RESULT</id>
+      <enabled>Y</enabled>
+      <name>RESULT</name>
+    </field>
+    <field>
+      <id>NR_RESULT_ROWS</id>
+      <enabled>Y</enabled>
+      <name>NR_RESULT_ROWS</name>
+    </field>
+    <field>
+      <id>NR_RESULT_FILES</id>
+      <enabled>Y</enabled>
+      <name>NR_RESULT_FILES</name>
+    </field>
+    <field>
+      <id>LOG_FIELD</id>
+      <enabled>N</enabled>
+      <name>LOG_FIELD</name>
+    </field>
+    <field>
+      <id>COPY_NR</id>
+      <enabled>N</enabled>
+      <name>COPY_NR</name>
+    </field>
+  </jobentry-log-table>
+  <channel-log-table>
+    <connection />
+    <schema />
+    <table />
+    <timeout_days />
+    <field>
+      <id>ID_BATCH</id>
+      <enabled>Y</enabled>
+      <name>ID_BATCH</name>
+    </field>
+    <field>
+      <id>CHANNEL_ID</id>
+      <enabled>Y</enabled>
+      <name>CHANNEL_ID</name>
+    </field>
+    <field>
+      <id>LOG_DATE</id>
+      <enabled>Y</enabled>
+      <name>LOG_DATE</name>
+    </field>
+    <field>
+      <id>LOGGING_OBJECT_TYPE</id>
+      <enabled>Y</enabled>
+      <name>LOGGING_OBJECT_TYPE</name>
+    </field>
+    <field>
+      <id>OBJECT_NAME</id>
+      <enabled>Y</enabled>
+      <name>OBJECT_NAME</name>
+    </field>
+    <field>
+      <id>OBJECT_COPY</id>
+      <enabled>Y</enabled>
+      <name>OBJECT_COPY</name>
+    </field>
+    <field>
+      <id>REPOSITORY_DIRECTORY</id>
+      <enabled>Y</enabled>
+      <name>REPOSITORY_DIRECTORY</name>
+    </field>
+    <field>
+      <id>FILENAME</id>
+      <enabled>Y</enabled>
+      <name>FILENAME</name>
+    </field>
+    <field>
+      <id>OBJECT_ID</id>
+      <enabled>Y</enabled>
+      <name>OBJECT_ID</name>
+    </field>
+    <field>
+      <id>OBJECT_REVISION</id>
+      <enabled>Y</enabled>
+      <name>OBJECT_REVISION</name>
+    </field>
+    <field>
+      <id>PARENT_CHANNEL_ID</id>
+      <enabled>Y</enabled>
+      <name>PARENT_CHANNEL_ID</name>
+    </field>
+    <field>
+      <id>ROOT_CHANNEL_ID</id>
+      <enabled>Y</enabled>
+      <name>ROOT_CHANNEL_ID</name>
+    </field>
+  </channel-log-table>
+  <pass_batchid>N</pass_batchid>
+  <shared_objects_file />
+  <entries>
+    <entry>
+      <name>START</name>
+      <description />
+      <type>SPECIAL</type>
+      <start>Y</start>
+      <dummy>N</dummy>
+      <repeat>N</repeat>
+      <schedulerType>0</schedulerType>
+      <intervalSeconds>0</intervalSeconds>
+      <intervalMinutes>60</intervalMinutes>
+      <hour>12</hour>
+      <minutes>0</minutes>
+      <weekDay>1</weekDay>
+      <DayOfMonth>1</DayOfMonth>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>64</xloc>
+      <yloc>160</yloc>
+    </entry>
+    <entry>
+      <name>business_shunt</name>
+      <description />
+      <type>SQL</type>
+      <sql>set enable_nestloop =off;
+INSERT INTO dwd_fact_Business_shunt(ID, Con, PPID, Returnto_Original, Returnto_Change, Rma_Request, Date_Received, Date_Shunt)
+SELECT id,fcon,fppid,returnto_from,returnto_to,requestrma,date_received,date_closed FROM ods_cj_rmachange_returnto
+WHERE updatetime::date=(now() - interval '1 day')::date;
+
+DELETE FROM dwd_fact_Business_shunt
+    WHERE ID_FLAG in (SELECT a1.ID_FLAG  FROM dwd_fact_Business_shunt a1,dwd_fact_Business_shunt a2 where a1.con=a2.con and a1.updatetime&lt;a2.updatetime);</sql>
+      <useVariableSubstitution>F</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename />
+      <sendOneStatement>F</sendOneStatement>
+      <connection>mxdb</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>480</xloc>
+      <yloc>160</yloc>
+    </entry>
+    <entry>
+      <name>Close_base_OrderDetail_2</name>
+      <description />
+      <type>SQL</type>
+      <sql>
+set enable_nestloop =off;
+INSERT INTO dwd_fact_Close_base_OrderDetail(ID, Order_ID,Area, SvrCode, Year_Code, Quarter_Code, Month_Code,
+                                       Week_Code, Rma, Con, PPID, PN, SN, Return_RMA,
+                                       ReturnTo, Commodity, Model,Model_Status, Date_SafeLunch,
+                                       RMA_issue_Date, Receive_Date, Start_Date, Packing_Date, Close_Date,
+                                       TAT_Closed, TAT_Packing, Test_Result, Final_Result, NG_ErrorDesc,
+                                       NG_Reason, ErrDesc_VFIR, FailReason_VFIR, Delay_Type, Delay_Reason,
+                                       Delay_Category, Submit_Date, Recover_Date, RequestRef, Platform,
+                                       Return_times, SO, Service_tag, SCRAP, fResCode, fsta, fVIMFunRes,
+                                       fRepairRes, LastID, Last_Closed_Date, ImportantNote, Last_ImportantNote,
+                                       Last_ServiceTAG, Last_RequestREF, Last_DelayCategory, Last_Delaytype,
+                                       Last_Returnto, Date_Bad_Post, Returnto_Last)
+SELECT id,Order_ID,Area,SvrCode,Year_Code,Quarter_Code,Month_Code,Week_Code,RMA,Control,PPID,PN,SN,RETURNTO_RMA,RETURNTO,
+       Commodity,Model,Model_Status,Date_SafeLunch,RMA_issue_Date,Receive_Date,Start_Date,Packing_Date,Close_Date,TAT_Closed,
+       TAT_Packing,Test_Result,Final_Result, NG_ErrorDesc,NG_Reason, ErrDesc_VFIR, FailReason_VFIR, Delay_Type, Delay_Reason,
+       Delay_Category, Submit_Date, Recover_Date, RequestRef, Platform,Return_times, SO, Service_tag, SCRAP, fResCode, fsta,
+       fVIMFunRes,fRepairRes, LastID, Last_Closed_Date, ImportantNote, Last_ImportantNote,Last_ServiceTAG, Last_RequestREF,
+       DelayCategory, Delaytype,Last_Returnto, Date_Bad_Post, Returnto_Last FROM
+(select aa.fItemid as Order_ID,
+case when bb.CustomerCode = 'DELL ARB' then 'ARB' else 'XM' end as Area,
+bb.ServiceCode as SvrCode, aa.id, cc.fym Year_Code , cc.fqm as Quarter_Code, cc.fmm Month_Code , cc.fwk Week_Code,
+rma.fReturnTo as RETURNTO_RMA, aa.fReturnto as RETURNTO, bb.Commodity AS Commodity,
+RMA.fCon as Control, RMA.frma as RMA, aa.fpn as PN, aa.fppid AS PPID,   aa.fsn as SN, dd.Model as Model,
+case when aa.fRmaClass = 45 then --ARB MB
+case when dd.Sta_ARB in (2,6) THEN 'Safe Launch'  else 'NPI' end
+else
+case when dd.fsta in (2,6) THEN 'Safe Launch'  else 'NPI' end
+end as Model_Status, --a1.FCodeName
+
+case when aa.fRmaClass = 45 then dd.Date_SafeLunch_arb
+else Date_SafeLunch end  as Date_SafeLunch,
+RMA.Cdate as RMA_issue_Date,
+RMA.fRptDate as Receive_Date, to_timestamp(null::text,'YYYY-MM-dd hh:mm:ss[.f...]') as Start_Date,
+case when aa.fsta = 19 then aa.fDate_Pack else aa.fDate_BadPost end AS Packing_Date,
+aa.fShipDate as Close_Date , -1 as TAT_Closed  , -1 as TAT_Packing,
+case when ee.Disposition &lt;&gt; '' then ee.Disposition else  a2.FCodeName  end as Test_Result,
+''  Final_Result,
+case when aa.fsta = 29 and aa.frescode &lt;&gt;1 then aa.fErrDesc_En  ELSE '' end as NG_ErrorDesc,
+case when aa.fsta = 29 and aa.frescode &lt;&gt;1 then aa.fFailReasen_En  ELSE '' end as NG_Reason,
+ee.fErrDesc as ErrDesc_VFIR, ee.fFailReason FailReason_VFIR,
+f1.fCodeName as Delay_Type  , ff.fWaitReason Delay_Reason,
+ff.fRemark Delay_Category, ff.Cdate as Submit_Date,ff.fUnWaitDate  as Recover_Date,
+RMA.fRequestREF as RequestRef, dd.model as Platform,
+aa.fReturnTimes Return_times, rma.fSo as SO, RMA.fSt as Service_tag,
+'' AS SCRAP,
+aa.fResCode , aa.fsta, aa.fVIMFunRes, aa.fRepairRes,
+aa.fLastID as LastID, RR.fShipDate as Last_Closed_Date, RMA.ImportantNote, RMA_RR.ImportantNote as Last_ImportantNote,
+RMA_RR.fSt as  Last_ServiceTAG, RMA_RR.fRequestREF as  Last_RequestREF,
+f1.DelayCategory, f1.Delaytype, RMA_RR.fReturnTo as Last_Returnto, aa.fDate_BadPost as Date_Bad_Post,
+RMA.Returnto_Last
+
+
+from ods_cj_odditem aa
+inner join ods_cj_rmaitem RMA on RMA.Id = aa.fItemid
+inner join ods_wx_returnto_base bb on RMA.fReturnTo = bb.ReturnTo  AND CustomerCode in ('DELL', 'DELL ARB', 'DELL_PNA','THB')
+left outer join ods_holidays cc on aa.fShipDate = to_timestamp(cc.fsDate::text,'YYYY-MM-dd hh:mm:ss[.f...]')
+left outer join v_Screen_PN_Base dd on dd.PN = aa.fpn
+--left outer join cj_code a1 on a1.FType = 56 and a1.FCode = dd.fsta
+left outer join ods_screen_disposition ee on ee.fScreenID = aa.id
+left outer join ods_wx_wait_master ff on ff.id = aa.fwaitid
+left outer join ods_cj_delay_mast f1 on ff.fWaitType = f1.fcode
+LEFT OUTER JOIN ods_cj_code a2 ON a2.FType = 22 AND a2.FParent = '7' AND a2.FCode = aa.fVIMFunRes
+left outer join ods_cj_odditem RR on RR.id = aa.fLastID
+left outer join ods_cj_rmaitem RMA_RR on RMA_RR.Id = RR.fItemid
+
+where aa.fsta IN (19,29)
+and RMA.fReturnTo in (select ReturnTo from ods_wx_returnto_base where  CustomerCode in ('DELL', 'DELL ARB', 'DELL_PNA','THB'))
+AND bb.ServiceCode in (8, 14, 16,17,18,  21,22,23, 25,26,27,28,32,36,39,43,44,45, 87)
+and aa.fRmaClass &lt;&gt; 46
+and aa.fShipDate >= '2020-03-01'
+and aa.updatetime::date=(now() - interval '1 day')::date
+
+UNION ALL
+
+select aa.fItemid as Order_ID,
+case when bb.CustomerCode = 'DELL ARB' then 'ARB' else 'XM' end as Area,
+bb.ServiceCode as SvrCode, aa.id, cc.fym Year_Code ,cc.fqm as Quarter_Code, cc.fmm Month_Code , cc.fwk Week_Code,
+rma.fReturnTo as RETURNTO_RMA, aa.fReturnto as RETURNTO, bb.Commodity,
+RMA.fCon as Control, RMA.frma as RMA, aa.fpn as PN, aa.fppid AS PPID,   aa.fsn as SN, dd.Model,
+case when dd.fsta in (2,6) THEN 'Safe Launch'  else 'NPI' end as Model_Status, --a1.FCodeName
+dd.fDate_Repair_Safe, to_date(RMA.Cdate::text,'YYYY-MM-dd HH24:MI:SS[.f...]') as RMA_issue_Date, to_date(RMA.fRptDate::text,'YYYY-MM-dd HH24:MI:SS[.f...]') as Receive_Date,
+to_date(null::text,'YYYY-MM-dd HH24:MI:SS[.f...]') as Start_Date,
+case when aa.fsta = 19 then to_date(aa.fDate_Pack::text,'YYYY-MM-dd HH24:MI:SS[.f...]') else to_date(aa.fDate_BadPost::text,'YYYY-MM-dd HH24:MI:SS[.f...]') end AS Packing_Date,
+aa.fShipDate as Close_Date , -1 as TAT_Closed  , -1 as TAT_Packing,
+case when ee.Disposition &lt;&gt; '' then ee.Disposition else  a2.FCodeName  end as Test_Result,
+'' Final_Result,
+case when aa.fsta = 29 and aa.frescode &lt;&gt;1 then aa.fErrDesc_En  ELSE '' end as NG_ErrorDesc,
+case when aa.fsta = 29 and aa.frescode &lt;&gt;1 then aa.fFailReasen_En  ELSE '' end as NG_Reason,
+ee.fErrDesc as ErrDesc_VFIR, ee.fFailReason FailReason_VFIR,
+f1.fCodeName as Delay_Type  , ff.fWaitReason Delay_Reason,
+ff.fRemark Delay_Category, ff.Cdate as Submit_Date,ff.fUnWaitDate as Recover_Date,
+RMA.fRequestREF as RequestRef, dd.model as Platform,
+aa.fReturnTimes Return_times, rma.fSo as SO, RMA.fSt as Service_tag ,
+--CASE WHEN aa.frescode = 1 THEN 'No' WHEN aa.frescode = 2 THEN ee.scrap ELSE '' END
+'' AS SCRAP,
+aa.fResCode , aa.fsta, aa.fVIMFunRes, aa.fRepairRes,
+aa.fLastID as LastID, RR.fShipDate as Last_Closed_Date, RMA.ImportantNote, RMA_RR.ImportantNote as Last_ImportantNote,
+RMA_RR.fSt as  Last_ServiceTAG,  RMA_RR.fRequestREF as  Last_RequestREF,
+f1.DelayCategory, f1.Delaytype, RMA_RR.fReturnTo as Last_Returnto, aa.fDate_BadPost as Date_Bad_Post,
+RMA.Returnto_Last
+--case when RR.fShipDate &lt;&gt; '' then DATEDIFF(DAY, RR.fShipDate, RMA.fRptDate) else 0 end AS Days_RR
+from ods_cj_oddItem aa
+left outer join ods_cj_rmaitem RMA on RMA.Id = aa.fItemid
+inner join ods_wx_returnto_base bb on RMA.fReturnTo = bb.ReturnTo AND CustomerCode in ('DELL', 'DELL ARB', 'DELL_PNA')
+left outer join ods_holidays cc on aa.fShipDate = to_timestamp(cc.fsDate::text,'YYYY-MM-dd hh:mm:ss[.f...]')
+left outer join dwd_dim_mem dd on dd.pn = aa.fpn and aa.ODM = dd.odm
+--left outer join cj_code a1 on a1.FType = 56 and a1.FCode = dd.fsta
+left outer join ods_screen_disposition ee on ee.fScreenID = aa.id
+left outer join ods_wx_wait_master ff on ff.id = aa.fwaitid
+left outer join ods_cj_delay_mast f1 on ff.fWaitType = f1.fcode
+LEFT OUTER JOIN ods_cj_code a2 ON a2.FType = 22 AND a2.FParent = '7' AND a2.FCode = aa.fVIMFunRes
+left outer join ods_cj_odditem RR on RR.id = aa.fLastID
+left outer join ods_cj_rmaitem RMA_RR on RMA_RR.Id = RR.fItemid
+where aa.fsta IN (19,29) AND bb.ServiceCode in (15,24)
+and RMA.fReturnTo in (select ReturnTo from ods_wx_returnto_base where  CustomerCode in ('DELL', 'DELL ARB', 'DELL_PNA','THB'))
+and aa.fShipDate >= '2020-01-01'
+and aa.updatetime::date=(now() - interval '1 day')::date
+)as temp;
+
+DROP TABLE IF EXISTS temp_screen;
+CREATE TEMPORARY TABLE temp_screen(id int,Scrap varchar(30),fsta int);
+INSERT INTO temp_screen(id, Scrap,fsta)
+SELECT fScreenID,scrap,fsta  FROM ods_screen_disposition
+where fsta in (19,29) and updatetime::date=(now() - interval '1 day')::date;
+
+
+UPDATE dwd_fact_Close_base_OrderDetail aa
+SET SCRAP=cj_KPI_DELL_IsScrap(aa.returnto, aa.SvrCode, aa.fsta, aa.frescode, aa.fVIMFunRes, aa.fRepairRes,
+       CASE WHEN aa.frescode = 1 THEN 'No' WHEN aa.frescode = 2 THEN temp_screen.scrap WHEN aa.frescode = 3 THEN 'RTV' ELSE '' END)
+FROM   temp_screen
+WHERE aa.id=temp_screen.id and
+      aa.SvrCode in (8, 14, 15, 16,17,18,  21,22,23, 24, 25,26,27,28,32,36,39,43,44,45, 87)
+    -- and  aa.Commodity not in  ('DT LCD' , 'Monitor')
+     and aa.Area in ('ARB', 'XM')
+     and updatetime::date=(now() - interval '1 day')::date
+  --  and aa.fResCode in (1,2,3)
+    and COALESCE(aa.Scrap, '') &lt;&gt; cj_KPI_DELL_IsScrap(aa.Returnto, aa.SvrCode, aa.fsta, aa.frescode, aa.fVIMFunRes, aa.fRepairRes,
+      CASE WHEN aa.frescode = 1 THEN 'No' WHEN aa.frescode = 2 THEN temp_screen.scrap WHEN aa.frescode = 3 then 'RTV' ELSE '' END);
+set enable_nestloop =off;
+update dwd_fact_Close_base_OrderDetail aa
+    set Test_Result = bb.Disposition
+   -- select aa.*
+    from ods_screen_disposition bb
+    where aa.updatetime::date=(now() - interval '1 day')::date
+    and bb.fScreenID = aa.id and bb.fsta in (19,29)
+    and   aa.SvrCode in (8, 14, 15, 16,17,18,  21,22,23, 24, 25,26,27,28,32,36,39,43,44,45, 87)
+    -- aa.Commodity not in  ('DT LCD' , 'Monitor')
+    and aa.Area in ('ARB', 'XM')
+    and COALESCE(aa.Test_Result, '') &lt;&gt; COALESCE(bb.Disposition, '');
+
+SELECT Dell_KPI_days('dwd_fact_close_base_orderdetail');--更新其他
+
+DELETE FROM dwd_fact_Close_base_OrderDetail
+    WHERE ID_FLAG in (SELECT a1.ID_FLAG  FROM dwd_fact_Close_base_OrderDetail a1,dwd_fact_Close_base_OrderDetail a2
+    where a1.Con=a2.Con and a1.updatetime&lt;a2.updatetime);</sql>
+      <useVariableSubstitution>F</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename />
+      <sendOneStatement>F</sendOneStatement>
+      <connection>mxdb</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>336</xloc>
+      <yloc>160</yloc>
+    </entry>
+    <entry>
+      <name>Close_monitor_OrderDetail</name>
+      <description />
+      <type>SQL</type>
+      <sql>set enable_nestloop =off;
+INSERT INTO dwd_fact_Close_monitor_OrderDetail(ID, Order_ID, Area, SvrCode, Year_Code, Quarter_Code, Month_Code, Week_Code, Rma,
+                                               Con, PPID, PN, SN, Return_RMA, ReturnTo, Commodity, Model, Model_Status,
+                                               Date_SafeLunch, RMA_issue_Date, Receive_Date, Start_Date, Packing_Date, Close_Date,
+                                               TAT_Closed, TAT_Packing, Test_Result, Final_Result, NG_ErrorDesc, NG_Reason, ErrDesc_VFIR,
+                                               FailReason_VFIR, Panel_Reapir, Panel_Repair_type, Delay_Type, Delay_Reason, Delay_Category,
+                                               Submit_Date, Recover_Date, RequestRef, Platform, Return_times, SO, Service_tag, SCRAP, fResCode,
+                                               fsta, fVIMFunRes, fRepairRes, LastID, Last_Closed_Date, ImportantNote, Last_ImportantNote, Last_ServiceTAG,
+                                               Last_RequestREF, Last_DelayCategory, Last_Delaytype, Last_Returnto, Date_Bad_Post, Returnto_Last)
+    SELECT id,Order_ID,Area,SvrCode,Year_Code,Quarter_Code,Month_Code,Week_Code,RMA,Control,PPID,PN,SN,RETURNTO_RMA,RETURNTO,
+        Commodity,Model,Model_Status,Date_SafeLunch,RMA_issue_Date,Receive_Date,Start_Date,Packing_Date,Close_Date,TAT_Closed,
+        TAT_Packing,Test_Result,Final_Result, NG_ErrorDesc,NG_Reason, ErrDesc_VFIR, FailReason_VFIR,Panel_Reapir,Panel_Repair_type, Delay_Type,Delay_Reason,
+        Delay_Category, Submit_Date, Recover_Date, RequestRef, Platform,Return_times, SO, Service_tag, SCRAP, fResCode, fsta,
+        fVIMRes,fRepairRes, LastID, Last_Closed_Date, ImportantNote, Last_ImportantNote,Last_ServiceTAG, Last_RequestREF,
+        DelayCategory, Delaytype,Last_Returnto, Date_Bad_Post, Returnto_Last FROM
+    (select aa.fItemid as Order_ID,
+    case when bb.CustomerCode = 'DELL ARB' then 'ARB' else 'XM' end as Area,
+    bb.servicecode as SvrCode, aa.id, cc.fym Year_Code , cc.fqm as Quarter_Code, cc.fmm Month_Code , cc.fwk Week_Code,
+    rma.fReturnTo as RETURNTO_RMA, aa.fReturnto as RETURNTO, bb.Commodity,
+    RMA.fCon as Control, RMA.frma as RMA, aa.fpn as PN, aa.fppid AS PPID,  rma.fSn as SN, dd.Platform as Model,
+    case when fn_FPD_PN_fmsta(RMA.fReturnto,dd.fmSta,dd.fsta_ARB) in (2,6) THEN 'Safe Launch'  else 'NPI' end as Model_Status, --a1.FCodeName
+    fn_FPD_PN_ApproveDate(RMA.fReturnto,dd.ApproveDate,dd.Date_SafeLunch_ARB) as Date_SafeLunch, RMA.Cdate as RMA_issue_Date,
+    RMA.fRptDate as Receive_Date, to_date(null::text,'YYYY-MM-dd HH24:MI:SS[.f...]') as Start_Date,
+    case when aa.fsta = 59 then aa.fDate_FinalTest else to_timestamp(aa.fDate_Post::text,'YYYY-MM-dd HH24:MI:SS[.f...]') end AS Packing_Date,
+    to_timestamp(aa.fDate_Close::text,'YYYY-MM-dd HH24:MI:SS[.f...]') as Close_Date , -1 as TAT_Closed  , -1 as TAT_Packing,
+    --case when ee.Disposition &lt;&gt; '' then ee.Disposition else  a2.FCodeName  end
+    '' as Test_Result,
+    '' as Final_Result,
+    case when aa.fsta IN (39,49)  then aa.fErrDesc  ELSE '' end as NG_ErrorDesc,
+    case when aa.fsta IN (39,49)  then aa.fErrDesc  ELSE '' end as NG_Reason,
+    ee.fErrDesc as ErrDesc_VFIR, ee.fFailReason FailReason_VFIR,
+    case when PP.id > 0 then 'Y' else 'N' end as Panel_Reapir,  a7.FCodeName Panel_Repair_type,
+    f1.fCodeName as Delay_Type  , ff.fWaitReason Delay_Reason,
+    ff.fRemark Delay_Category, ff.Cdate as Submit_Date, ff.fUnWaitDate as Recover_Date,
+    RMA.fRequestREF as RequestRef, dd.Platform as Platform,
+    aa.fReTimes Return_times, rma.fSo as SO, RMA.fSt as Service_tag ,
+    ee.Scrap as Scrap,--ee.Scrap,
+    aa.fResCode , aa.fsta, aa.fVIMRes, aa.fRepairRes,
+    aa.fLastID as LastID, to_timestamp(RR.fDate_Close::text,'YYYY-MM-dd HH24:MI:SS[.f...]') as Last_Closed_Date, RMA.ImportantNote, RMA_RR.ImportantNote as Last_ImportantNote,
+    RMA_RR.fSt as  Last_ServiceTAG,  RMA_RR.fRequestREF as  Last_RequestREF,
+    f1.DelayCategory, f1.Delaytype, RMA_RR.fReturnTo as Last_Returnto, to_timestamp(aa.fDate_Close::text,'YYYY-MM-dd HH24:MI:SS[.f...]') as Date_Bad_Post,
+    RMA.Returnto_Last
+    --case when RR.fDate_Close &lt;&gt; '' then DATEDIFF(DAY, RR.fDate_Close, RMA.fRptDate) else 0 end AS Days_RR
+    from ods_wx_item aa
+    inner join ods_cj_rmaitem RMA on RMA.Id = aa.fItemid
+    left outer join ods_odm_rma_item PP on PP.id = aa.NewPanel_ID and PP.SvrCode = 202
+    inner join ods_wx_returnto_base bb on RMA.fReturnTo = bb.ReturnTo AND CustomerCode in ('DELL', 'DELL ARB', 'DELL_PNA')
+    left outer join ods_Holidays cc on aa.fDate_Close = cc.fsDate
+    left outer join ods_wx_monitor dd on dd.fPN = aa.fpn
+    --left outer join cj_code a1 on a1.FType = 56 and a1.FCode = dd.fmSta
+    left outer join ods_wx_disposition ee on ee.fwxID = aa.id
+    left outer join ods_wx_wait_master ff on ff.id = aa.fwaitid
+    left outer join ods_cj_delay_mast f1 on ff.fWaitType = f1.fcode
+    LEFT OUTER JOIN ods_cj_code a2 ON a2.FType = 22 AND a2.FParent = '7' AND a2.FCode = aa.fVIMRes
+    left outer join ods_cj_panel_code a7 on a7.FType = 23 and a7.FParent = '1' and a7.FCode = PP.PanelRepairType
+    left outer join ods_wx_item RR on RR.id = aa.fLastID
+    left outer join ods_cj_rmaitem RMA_RR on RMA_RR.Id = RR.fItemid
+    where  aa.fsta IN (19,34,39,49,59,69,51,52,53) and RMA.fReturnTo in ('CJREPAIR', 'CJINUSE', 'ARBCJMON') -- and bb.ServiceCode in (13)
+    and COALESCE(aa.fDate_Close, '') >= '2020-01-01'
+    and aa.updatetime::date=(now() - interval '1 day')::date
+    )as temp;
+
+DROP TABLE IF EXISTS temp_monitor;
+CREATE TEMPORARY TABLE temp_monitor(id int,Scrap varchar(30),Disposition varchar(5));
+INSERT INTO temp_monitor(id, Scrap, Disposition)
+SELECT fwxid,scrap,disposition  FROM ods_wx_disposition as owd
+where fsta in (19,34,39,49,51,52,53,59) and updatetime::date=(now() - interval '1 day')::date;
+
+UPDATE dwd_fact_Close_monitor_OrderDetail dfCmOD
+SET SCRAP=temp_monitor.Scrap,Test_Result = temp_monitor.Disposition
+FROM temp_monitor
+WHERE dfCmOD.id=temp_monitor.id and dfCmOD.SvrCode=13  and dfCmOD.Area in ('ARB', 'XM')
+and ( COALESCE(dfCmOD.SCRAP, '') &lt;&gt; COALESCE(temp_monitor.SCRAP, '')
+        or COALESCE(dfCmOD.Test_Result, '') &lt;&gt; COALESCE(temp_monitor.Disposition, ''))
+and dfCmOD.updatetime::date=(now() - interval '1 day')::date;
+
+update dwd_fact_Close_monitor_OrderDetail aa
+     set SCRAP = bb.Scrap,Test_Result = bb.Disposition
+     from ods_wx_disposition bb
+     where aa.SvrCode = 13  and aa.Area in ('ARB', 'XM')
+     and bb.fwxID = aa.id and bb.fsta in (19,34,39,49,51,52,53,59)
+     and ( COALESCE(aa.SCRAP, '') &lt;&gt; COALESCE(bb.SCRAP, '')
+        or COALESCE(aa.Test_Result, '') &lt;&gt; COALESCE(bb.Disposition, '')   )
+     and aa.updatetime::date=(now() - interval '1 day')::date;
+
+SELECT Dell_KPI_days('dwd_fact_close_monitor_orderdetail');--更新其他
+
+
+DELETE FROM dwd_fact_close_monitor_orderdetail
+    WHERE ID_FLAG in (SELECT a1.ID_FLAG  FROM dwd_fact_close_monitor_orderdetail a1,dwd_fact_close_monitor_orderdetail a2
+    where a1.Con=a2.Con and a1.updatetime&lt;a2.updatetime);</sql>
+      <useVariableSubstitution>F</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename />
+      <sendOneStatement>F</sendOneStatement>
+      <connection>mxdb</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>624</xloc>
+      <yloc>160</yloc>
+    </entry>
+    <entry>
+      <name>Close_panel_OrderDetail</name>
+      <description />
+      <type>SQL</type>
+      <sql>set enable_nestloop =off;
+INSERT INTO dwd_fact_Close_panel_OrderDetail(  ID, Area, SvrCode, Year_Code, Quarter_Code, Month_Code, Week_Code, Rma,
+                                               Con, PPID, PN, SN, Return_RMA, ReturnTo, Commodity, Model_Status,
+                                               Date_SafeLunch, RMA_issue_Date, Receive_Date, Start_Date, Packing_Date, Close_Date,
+                                               TAT_Closed, TAT_Packing, Test_Result, Final_Result, NG_ErrorDesc, NG_Reason, ErrDesc_VFIR,
+                                               FailReason_VFIR, Panel_Reapir, Panel_Repair_type, Delay_Type, Delay_Reason, Delay_Category,
+                                               Submit_Date, Recover_Date, RequestRef, Platform, Return_times, SO, Service_tag, SCRAP, fResCode,
+                                               fsta, fVIMFunRes, LastID, Last_Closed_Date, ImportantNote, Last_ImportantNote, Last_ServiceTAG,
+                                               Last_RequestREF, Last_DelayCategory, Last_Delaytype, Last_Returnto, Date_Bad_Post, Returnto_Last)
+SELECT id,Area,SvrCode,Year_Code,Quarter_Code,Month_Code,Week_Code,RMA,Control,PPID,PN,SN,RETURNTO_RMA,RETURNTO,
+    Commodity,Model_Status,Date_SafeLunch,RMA_issue_Date,Receive_Date,Start_Date,Packing_Date,Close_Date,TAT_Closed,
+    TAT_Packing,Test_Result,Final_Result, NG_ErrorDesc,NG_Reason, ErrDesc_VFIR, FailReason_VFIR,Panel_Reapir,Panel_Repair_type, Delay_Type,Delay_Reason,
+    Delay_Category, Submit_Date, Recover_Date, RequestRef, Platform,Return_times, SO, Service_tag, SCRAP, fResCode, fsta,
+    fVIMRes, LastID, Last_Closed_Date, ImportantNote, Last_ImportantNote,Last_ServiceTAG, Last_RequestREF,
+    DelayCategory, Delaytype,Last_Returnto, Date_Bad_Post, Returnto_Last FROM
+    (select
+    case when bb.CustomerCode = 'DELL ARB' then 'ARB' else 'XM' end as Area,
+    pp.SvrCode, PP.id, cc.fym Year_Code , cc.fqm as Quarter_Code, cc.fmm Month_Code , cc.fwk Week_Code,
+    rma.fReturnTo as RETURNTO_RMA, PP.Returnto as RETURNTO, bb.Commodity,
+    RMA.fCon as Control, RMA.frma as RMA, PP.fpn as PN, PP.MonitorPPID AS PPID, PP.PPID as SN, dd.fModel as Modal, --rma.fSn as SN
+    case when dd.fsta in (6) THEN 'Safe Launch'  else 'NPI' end as Model_Status, --a1.FCodeName
+    dd.Date_SafeLunch as Date_SafeLunch, RMA.Cdate as RMA_issue_Date,
+    RMA.fRptDate as Receive_Date, to_date(null::text,'YYYY-MM-dd HH24:MI:SS[.f...]') as Start_Date,
+    PP.Date_Packing AS Packing_Date,
+    pp.Date_Closed as Close_Date , -1 as TAT_Closed  , -1 as TAT_Packing,
+    --case when ee.Disposition &lt;&gt; '' then ee.Disposition else  a2.FCodeName  end
+    '' as Test_Result,
+    '' Final_Result,
+    case when PP.fsta IN (29,39)  then PP.Error_VMI  ELSE '' end as NG_ErrorDesc,
+    case when pp.fsta IN (29,39)  then PP.Error_VMI  ELSE '' end as NG_Reason,
+    ee.fErrDesc as ErrDesc_VFIR, ee.fFailReason FailReason_VFIR,
+    case when PP.id > 0 then 'Y' else 'N' end  Panel_Reapir,  a7.FCodeName Panel_Repair_type,
+    f1.fCodeName as Delay_Type  , ff.fDesc Delay_Reason,
+    ff.fRemark Delay_Category, ff.Cdate as Submit_Date, ff.Date_Dis as Recover_Date,
+    RMA.fRequestREF as RequestRef, dd.Platform as Platform,
+    PP.ReturnTimes as Return_times, rma.fSo as SO, RMA.fSt as Service_tag ,
+    '' as Scrap , --ee.Scrap,
+    PP.fResCode , PP.fsta, PP.fResult_VMI as fVIMRes,PP.fResult,
+    PP.LastID, RR.Date_Closed as Last_Closed_Date, RMA.ImportantNote, RMA_RR.ImportantNote as Last_ImportantNote,
+    RMA_RR.fSt as  Last_ServiceTAG,   RMA_RR.fRequestREF as  Last_RequestREF,
+    '' DelayCategory, '' Delaytype, RMA_RR.fReturnTo as Last_Returnto, PP.date_closed as Date_Bad_Post,
+    RMA.Returnto_Last
+    --case when RR.Date_Closed &lt;&gt; '' then DATEDIFF(DAY, RR.Date_Closed, RMA.fRptDate) else 0 end AS Days_RR
+    from ods_ODM_RMA_ITEM PP
+    left outer join ods_cj_rmaitem RMA on RMA.Id = PP.OLDSYS_ID
+    inner join ods_wx_ReturnTo_Base bb on pp.Returnto = bb.ReturnTo AND CustomerCode in ('DELL', 'DELL ARB', 'DELL_PNA')
+    left outer join ods_Holidays cc on to_date(pp.Date_Closed::text,'YYYY-MM-dd') = to_date(cc.fsDate::text,'YYYY-MM-dd')
+    left outer join ods_ODM_PN_TPanel dd on dd.fPN = PP.fpn and dd.SvrCode = PP.SvrCode
+    --left outer join cj_code a1 on a1.FType = 56 and a1.FCode = dd.fmSta
+    left outer join ods_Screen_Disposition ee on ee.fScreenID = PP.id
+    left outer join ods_ODM_OnHold_Item ff on ff.id = pp.OnHoldID
+    left outer join ods_Base_ODM_OnHold f1 on ff.OnHoldType = f1.fcode
+    LEFT OUTER JOIN ods_cj_panel_code a2 ON a2.FType = 23 AND a2.FParent = '0' AND a2.FCode = pp.fResult_VMI
+    left outer join ods_cj_panel_code a7 on a7.FType = 23 and a7.FParent = '1' and a7.FCode = PP.PanelRepairType
+    left outer join ods_ODM_RMA_ITEM RR on RR.id = PP.LastID
+    left outer join ods_cj_rmaitem RMA_RR on RMA_RR.Id = RR.OLDSYS_ID
+    where PP.SvrCode in (205,218) and Fn_ODM_isClosedSta(PP.fsta)=1 and PP.fsta&lt;&gt;-10
+    and RMA.fReturnTo in (select ReturnTo from ods_wx_ReturnTo_Base where  CustomerCode in ('DELL', 'DELL ARB', 'DELL_PNA' ))
+    and pp.Date_Closed >= '2020-01-01'
+    and PP.updatetime::date=(now() - interval '1 day')::date) as tmp_panel;
+   
+update dwd_fact_Close_panel_OrderDetail aa
+    set SCRAP = cj_KPI_DELL_IsScrap(aa.returnto, aa.SvrCode, aa.fsta, aa.frescode, aa.fVIMFunRes, aa.fRepairRes, bb.Scrap)
+    ,   Test_Result = bb.Disposition
+    from ods_Screen_Disposition bb
+    where aa.SvrCode = 205 and  aa.Commodity = 'DT LCD'   and aa.Area in ('ARB', 'XM') -- and aa.SvrCode &lt;&gt; 70
+    and bb.fScreenID = aa.id and bb.fsta in (19,29)
+    and (  COALESCE(aa.SCRAP, '') &lt;&gt;  COALESCE(cj_KPI_DELL_IsScrap(aa.returnto, aa.SvrCode, aa.fsta, aa.frescode, aa.fVIMFunRes, aa.fRepairRes, bb.Scrap), '')
+         or  COALESCE(aa.Test_Result, '') &lt;&gt;  COALESCE(bb.Disposition, ''))
+    and aa.updatetime::date=(now() - interval '1 day')::date;
+
+SELECT Dell_KPI_days('dwd_fact_close_panel_orderdetail');--更新其他
+
+
+DELETE FROM dwd_fact_close_panel_orderdetail
+    WHERE ID_FLAG in (SELECT a1.ID_FLAG  FROM dwd_fact_close_panel_orderdetail a1,dwd_fact_close_panel_orderdetail a2
+    where a1.Con=a2.Con and a1.updatetime&lt;a2.updatetime);</sql>
+      <useVariableSubstitution>F</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename />
+      <sendOneStatement>F</sendOneStatement>
+      <connection>mxdb</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>784</xloc>
+      <yloc>160</yloc>
+    </entry>
+    <entry>
+      <name>OemRma_Apply</name>
+      <description />
+      <type>SQL</type>
+      <sql>set enable_nestloop =off;
+INSERT INTO dwd_fact_OemRma_Apply (Order_ID, RmaID,OEM_Con,date_OEM)
+SELECT orid,frma,fcon,fdate_oemrma
+FROM ods_cj_rmaitem
+WHERE orid IS NOT NULL
+AND updatetime::date=(now() - interval '1 day')::date;
+
+DELETE FROM dwd_fact_OemRma_Apply
+    WHERE ID in (SELECT a1.id  FROM dwd_fact_OemRma_Apply a1,dwd_fact_OemRma_Apply a2
+    where a1.OEM_Con=a2.OEM_Con and a1.updatetime&lt;a2.updatetime);
+</sql>
+      <useVariableSubstitution>F</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename />
+      <sendOneStatement>F</sendOneStatement>
+      <connection>mxdb</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>912</xloc>
+      <yloc>160</yloc>
+    </entry>
+    <entry>
+      <name>OrderDetail</name>
+      <description />
+      <type>SQL</type>
+      <sql>set enable_nestloop =off;
+INSERT INTO dwd_fact_OrderDetail as dfOD (Order_ID, Rma, Con, PPID, PN, SN,ReturnTo,OEM_Location, CDate,Receive_Date
+                                         ,RequestRef,Close_Date, OEMRma, OEMRma_Date, Returnto_First,RETURNTO_RMA
+                                         ,Returnto_Last,Commodity,fRmaAssign_Date,FCodeID,fHawb,fSRHawb)
+SELECT raid,frma,fcon,fppid,fpn,fsn,freturnto,fsendto,
+       RMA.cdate,frptdate,frequestref,fclosedate,foemrma,
+       fdate_oemrma,returnto_first,freturnto,Returnto_Last,
+       bb.commodity,frmaassigndate,frescode,fhawb,fsrhawb
+FROM ods_cj_rmaitem RMA
+inner join ods_wx_returnto_base bb on RMA.fReturnTo = bb.ReturnTo
+and bb.ServiceCode not in (1,9, 41, 60)
+AND CustomerCode in ('DELL', 'DELL ARB', 'DELL_PNA')  --, 'THB'
+and Customer &lt;&gt; 'ZY'
+WHERE RMA.updatetime::date=(now() - interval '1 day')::date
+and RMA.fSta > 0;
+
+UPDATE dwd_fact_OrderDetail dfOD
+SET Area=
+    case
+        when bb.CustomerCode = 'DELL ARB'
+            then 'ARB'
+        else 'XM'
+        end
+FROM ods_wx_returnto_base bb
+WHERE dfOD.updatetime::date=(now() - interval '1 day')::date
+      and dfOD.returnto=bb.returnto;
+
+DROP TABLE IF EXISTS temp;
+CREATE TEMPORARY TABLE temp(id int,customecode varchar(100),customer varchar(100),returnto varchar(30),serviceID int);
+INSERT INTO temp(customecode,customer, returnto) SELECT customercode,customer,returnto  FROM ods_wx_returnto_base
+WHERE updatetime::date=(now() - interval '1 day')::date;
+
+UPDATE temp
+    SET id= ddc.id FROM dwd_dim_custome  ddc
+WHERE temp.customecode=ddc.customercode and temp.customer=ddc.customer;
+
+UPDATE temp
+    SET serviceID= owrb.servicecode FROM ods_wx_returnto_base AS owrb
+WHERE temp.returnto=owrb.returnto;
+
+UPDATE dwd_fact_OrderDetail dfOD
+SET CustomeID = (select temp.id from temp where temp.returnto=dfOD.returnto)
+WHERE dfOD.updatetime::date=(now() - interval '1 day')::date;
+
+UPDATE dwd_fact_OrderDetail dfOD
+SET ServiceID=(select temp.serviceID from temp where temp.returnto=dfOD.returnto)
+WHERE updatetime::date=(now() - interval '1 day')::date;
+
+update dwd_fact_OrderDetail dfOD set (Year_Code, Quarter_Code,Month_Code,Week_Code) = (bb.fym,bb.fqm,bb.fmm,bb.fwk)
+from ods_holidays bb
+where CDate=bb.fdate;
+
+--排除HDD 未在SCREEN系统中的数据
+DELETE FROM dwd_fact_OrderDetail
+WHERE Order_ID IN
+(
+select AA.Order_ID From dwd_fact_OrderDetail AA
+LEFT OUTER JOIN ods_cj_odditem bb on AA.Order_ID = bb.fItemid
+ where Area = 'XM' and ReturnTo in ('CJHDDSC', 'RTHBTW', 'RTHBSSD')-- and Year_Code='FY19' AND Week_Code = 25
+and bb.id is null
+)
+and updatetime::date=(now() - interval '1 day')::date;
+
+--排除RMA CANCEL
+delete  from  dwd_fact_OrderDetail where Order_ID in (select ID from ods_cj_rmaitem where fSta &lt;=0)
+and Area in ('XM', 'ARB') and updatetime::date=(now() - interval '1 day')::date;
+
+--更新ARB YN 信息
+update dwd_fact_OrderDetail
+set ARB_YN = case when substring(RequestRef, 1,3) = 'ARB' then 'Y' else 'N' end
+where ARB_YN is null and updatetime::date=(now() - interval '1 day')::date;
+
+--排除 CJINUSE
+delete from dwd_fact_OrderDetail where serviceid = 13
+and RETURNTO_RMA = 'CJINUSE'
+and SUBSTRING(Con, 1,4) ='CJIN'
+and updatetime::date=(now() - interval '1 day')::date;
+
+--FPD 排除CJINUSE 且上一次Returnto 为 CJSPHL  add by ruanjj/王克军  2021-2-1
+delete  from dwd_fact_OrderDetail
+where Area in ('XM','ARB')
+and RETURNTO_RMA = 'CJINUSE'
+and Returnto_First = 'CJSPHL'
+and updatetime::date=(now() - interval '1 day')::date;
+
+/*去重*/
+DELETE FROM dwd_fact_OrderDetail
+    WHERE ID in (SELECT a1.ID  FROM dwd_fact_OrderDetail a1,dwd_fact_OrderDetail a2
+    where a1.con=a2.con and a1.updatetime::date&lt;a2.updatetime::date);</sql>
+      <useVariableSubstitution>F</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename />
+      <sendOneStatement>F</sendOneStatement>
+      <connection>mxdb</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>1040</xloc>
+      <yloc>160</yloc>
+    </entry>
+    <entry>
+      <name>OrderState</name>
+      <description />
+      <type>SQL</type>
+      <sql>set enable_nestloop =off;
+INSERT INTO dwd_fact_OrderState(Order_ID, RmaID, Con, Order_stateID, date_create, date_scrap, date_sr, date_OEM, date_sh, date_close)
+	SELECT raid,frma,fcon,fsta,cdate,fdate_scrap,fdate_sr,fdate_oemrma,fdate_sr,fclosedate FROM ods_cj_rmaitem
+	WHERE fsta IN (SELECT id FROM dwd_dim_Goodstate);
+</sql>
+      <useVariableSubstitution>F</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename />
+      <sendOneStatement>F</sendOneStatement>
+      <connection>mxdb</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>1040</xloc>
+      <yloc>256</yloc>
+    </entry>
+    <entry>
+      <name>Report_DELL_KPI_Item_WIP</name>
+      <description />
+      <type>SQL</type>
+      <sql>set enable_nestloop =off;
+
+INSERT INTO dwd_fact_Report_DELL_KPI_Item_WIP(area, svrcode, id, fym, fqm, fmm, fwm, returnto_rma,
+                                              returnto, commodity, control, rma, pn, ppid, sn, rma_status, rma_处理类型, workstation,
+                                              next_workstation, model, "Model Status", date_safelunch, "RMA issue_Date", receive_date,
+                                              start_date, agingdays, aging, "Over due", test_result, has_repair, "VMI Des.", panel_reapir,
+                                              "Panel_Repair type", ng_reason, 故障原因, "Is_On hold", delay_type, delay_reason, delay_category,
+                                              submit_date, recover_date, requestref, platform, "Return times", so, "Service tag #", trpsn, frescode,
+                                              fsta, fvimfunres, frepairres, rmasta, rmarescode,  lastid, last_closed_date,importantnote,
+                                              last_importantnote, delaycategory, delaytype, 排程日期)
+select
+case when bb.CustomerCode = 'DELL ARB' then 'ARB' else 'XM' End AS AREA,
+bb.ServiceCode as SvrCode, aa.id, cc.fym fym , cc.fqm as fqm, cc.fmm fmm , cc.fwk fwm,
+rma.fReturnTo as RETURNTO_RMA, aa.fReturnto as RETURNTO, bb.Commodity,
+RMA.fCon as Control, RMA.frma as RMA, aa.fpn as PN, aa.fppid AS PPID,   aa.fsn as SN,
+a5.FCodeName as RMA_Status, a6.FCodeName as RMA_处理类型,
+a3.FCodeName Workstation,  a4.FCodeName as Next_Workstation, dd.Model,
+case when aa.fRmaClass = 45    then
+  case when dd.Sta_ARB in (2,6) THEN 'Safe Launch'  else 'NPI' end
+else case when dd.fsta in (2,6) THEN 'Safe Launch'  else 'NPI' end
+end as "Model Status", --a1.FCodeName
+case when aa.fRmaClass = 45  then dd.Date_SafeLunch_ARB
+else dd.Date_SafeLunch end as Date_SafeLunch,
+RMA.Cdate as "RMA issue_Date",
+RMA.fRptDate as Receive_Date, to_date(null::text,'YYYY-MM-dd HH24:MI:SS[.f...]')  as Start_Date,
+-1 as AgingDays,
+'' as Aging, --按区间分on way;0-5;6-10;11-19;20-29;30-60,>60
+'' as "Over due",  --TAT vs TAT goal；正常，即将超期，超期三种
+a2.FCodeName  as Test_Result,
+''  Has_Repair,
+'' "VMI Des.",
+'' Panel_Reapir,  '' "Panel_Repair type",
+aa.fErrDesc NG_Reason,   aa.fFailReasen 故障原因,
+aa.fIsWait "Is_On hold", f1.fCodeName as Delay_Type  , ff.fWaitReason Delay_Reason,
+ff.fRemark Delay_Category,  ff.Cdate as Submit_Date,  ff.fUnWaitDate as Recover_Date,
+RMA.fRequestREF as RequestRef, dd.model as Platform,
+aa.fReturnTimes "Return times", rma.fSo as SO, RMA.fSt as "Service tag #" ,
+rma.fRecNumber as TRPSN , aa.fResCode , aa.fsta, aa.fVIMFunRes, aa.fRepairRes,
+RMA.fSta as RmaSta, RMA.fResCode as RMAResCode,
+aa.fLastID as LastID,  RR.fShipDate as Last_Closed_Date
+, RMA.ImportantNote, RMA_RR.ImportantNote as Last_ImportantNote,
+f1.DelayCategory as delayCategory,f1.DelayType as delaytype , aa.EasyPlanDate as 排程日期
+from  ods_cj_oddItem aa
+inner join ods_cj_rmaitem RMA on RMA.Id = aa.fItemid
+inner join ods_wx_ReturnTo_Base bb on RMA.fReturnTo  = bb.ReturnTo AND CustomerCode in ('DELL', 'DELL ARB', 'DELL_PNA')
+left outer join ods_Holidays cc on RMA.fRptDate = to_date(cc.fsDate::text,'YYYY-MM-dd HH24:MI:SS[.f...]')
+left outer join v_Screen_PN_Base dd on dd.PN = aa.fpn
+left outer join ods_wx_Wait_master ff on ff.id = aa.fwaitid
+left outer join ods_cj_Delay_Mast f1 on ff.fWaitType = f1.fcode
+LEFT OUTER JOIN ods_cj_code a2 ON a2.FType = 22 AND a2.FParent = '7' AND a2.FCode = aa.fVIMFunRes
+left outer join ods_cj_code a3 on a3.FType = 170 and a3.FCode =aa.fsta
+left outer join ods_cj_code a4 on a4.FType = 170 and a4.FCode =aa.fNextSta
+left outer join ods_cj_code a5 on a5.FType = 7 and a5.FCode = RMA.fSta
+left outer join ods_cj_code a6 on a6.FType = 9 and a6.FCode = RMA.fResCode
+left outer join ods_cj_oddItem RR on RR.id = aa.fLastID
+left outer join ods_cj_rmaitem RMA_RR on RMA_RR.Id = RR.fItemid
+
+where aa.fsta not IN (-3,19,29)
+and bb.ServiceCode in (8, 16,17,18,  21,22,23, 25,26,27,28,32,36,39,43,44,45,87)
+and RMA.fSta >=0
+and aa.updatetime::date=(now() - interval '1 day')::date
+union all
+select case when bb.CustomerCode = 'DELL ARB' then 'ARB' else 'XM' End AS AREA,
+bb.ServiceCode as SvrCode, aa.id, cc.fym fym , cc.fqm as fqm,cc.fmm fmm, cc.fwk fwm,
+rma.fReturnTo as RETURNTO_RMA, aa.fReturnto as RETURNTO, bb.Commodity,
+RMA.fCon as Control, RMA.frma as RMA, aa.fpn as PN, aa.fppid AS PPID,   aa.fsn as SN,
+a5.FCodeName as RMA_Status, a6.FCodeName as RMA_处理类型,
+a3.FCodeName Workstation,  a4.FCodeName as Next_Workstation, dd.fmodel,
+case when dd.fsta in (2,6) THEN 'Safe Launch'  else 'NPI' end as "Model Status", --a1.FCodeName
+dd.fDate_Repair_Safe as Date_SafeLunch, RMA.Cdate as "RMA issue_Date",
+RMA.fRptDate as Receive_Date, to_date(null::text,'YYYY-MM-dd HH24:MI:SS[.f...]')  as Start_Date,
+-1 as AgingDays,
+'' as Aging, --按区间分on way;0-5;6-10;11-19;20-29;30-60,>60
+'' as "Over due",  --TAT vs TAT goal；正常，即将超期，超期三种
+a2.FCodeName  as Test_Result,
+''  Has_Repair,
+'' "VMI Des.",
+'' Panel_Reapir,  '' "Panel_Repair type",
+aa.fErrDesc NG_Reason,   aa.fFailReasen 故障原因,
+aa.fIsWait "Is_On hold", f1.fCodeName as Delay_Type  , ff.fWaitReason Delay_Reason,
+ff.fRemark Delay_Category, ff.Cdate as Submit_Date, ff.fUnWaitDate as Recover_Date,
+RMA.fRequestREF as RequestRef, dd.fmodel as Platform,
+aa.fReturnTimes "Return times", rma.fSo as SO, RMA.fSt as "Service tag #" ,
+rma.fRecNumber as TRPSN , aa.fResCode , aa.fsta, aa.fVIMFunRes, aa.fRepairRes,
+RMA.fSta as RmaSta, RMA.fResCode as RMAResCode,
+aa.fLastID as LastID, RR.fShipDate as Last_Closed_Date
+, RMA.ImportantNote, RMA_RR.ImportantNote as Last_ImportantNote,f1.DelayCategory,
+f1.DelayType,  aa.EasyPlanDate as 排程日期
+from  ods_cj_oddItem aa
+inner join ods_cj_rmaitem RMA on RMA.Id = aa.fItemid
+inner join ods_wx_ReturnTo_Base bb on RMA.fReturnto = bb.ReturnTo AND CustomerCode in ('DELL', 'DELL ARB', 'DELL_PNA')
+left outer join ods_Holidays cc on RMA.fRptDate = to_date(cc.fsDate::text,'YYYY-MM-dd HH24:MI:SS[.f...]')
+left outer join ods_cj_mem_model dd on dd.fpn = aa.fpn and aa.ODM = dd.ODM
+left outer join ods_wx_Wait_master ff on ff.id = aa.fwaitid
+left outer join ods_cj_Delay_Mast f1 on ff.fWaitType = f1.fcode
+LEFT OUTER JOIN ods_cj_code a2 ON a2.FType = 22 AND a2.FParent = '7' AND a2.FCode = aa.fVIMFunRes
+left outer join ods_cj_code a3 on a3.FType = 170 and a3.FCode =aa.fsta
+left outer join ods_cj_code a4 on a4.FType = 170 and a4.FCode =aa.fNextSta
+left outer join ods_cj_code a5 on a5.FType = 7 and a5.FCode = RMA.fSta
+left outer join ods_cj_code a6 on a6.FType = 9 and a6.FCode = RMA.fResCode
+left outer join ods_cj_oddItem RR on RR.id = aa.fLastID
+left outer join ods_cj_rmaitem RMA_RR on RMA_RR.Id = RR.fItemid
+where aa.fsta not IN (-3,19,29)
+  and aa.fRmaClass in (15,24)
+  and RMA.fSta > 0
+  and aa.updatetime::date=(now() - interval '1 day')::date
+union all
+select case when bb.CustomerCode = 'DELL ARB' then 'ARB' else 'XM' End AS AREA,
+ bb.servicecode as SvrCode, aa.id, cc.fym fym , cc.fqm as fqm,cc.fmm fmm , cc.fwk fwm,
+rma.fReturnTo as RETURNTO_RMA, aa.fReturnto as RETURNTO, bb.Commodity,
+RMA.fCon as Control, RMA.frma as RMA, aa.fpn as PN, aa.fppid AS PPID,  rma.fSn as SN,
+a5.FCodeName as RMA_Status, a6.FCodeName as RMA_处理类型,
+a3.FCodeName Workstation,  a4.FCodeName as Next_Workstation, dd.Platform as Modal,
+(case when fn_FPD_PN_fmsta(RMA.fReturnto,dd.fmSta,dd.fsta_ARB) in (2,6) THEN 'Safe Launch' else 'NPI' end) as "Model Status", --a1.FCodeName
+fn_FPD_PN_ApproveDate(RMA.fReturnto,dd.ApproveDate,dd.Date_SafeLunch_ARB) as Date_SafeLunch, RMA.Cdate as "RMA issue_Date",
+RMA.fRptDate as Receive_Date, to_timestamp(null::text,'YYYY-MM-dd HH24:MI:SS[.f...]') as Start_Date,
+-1 as AgingDays,
+'' as Aging, --按区间分on way;0-5;6-10;11-19;20-29;30-60,&gt;60
+'' as "Over due",  --TAT vs TAT goal；正常，即将超期，超期三种
+
+a2.FCodeName  Test_Result,
+aa.fIsRepairYN  Has_Repair,
+'' "VMI Des.",
+case when PP.id > 0 then 'Y' else 'N' end  Panel_Reapir,  a7.FCodeName "Panel_Repair type",
+COALESCE(aa.fErrDesc, GG.FailureSymptom) as NG_Reason,   '' as 故障原因,
+case when ff.fsta = 0 then 'Y' else COALESCE(pp.IsOnhold , 'N') end as  "Is_On hold",
+COALESCE(f1.fCodeName, ii.fCodeName) as Delay_Type  ,
+COALESCE(ff.fWaitReason, hh.fDesc) Delay_Reason,
+COALESCE(ff.fRemark, hh.fRemark) Delay_Category, ff.Cdate as Submit_Date,ff.fUnWaitDate as Recover_Date,
+RMA.fRequestREF as RequestRef, dd.Platform as Platform,
+aa.fReTimes "Return times", rma.fSo as SO, RMA.fSt as "Service tag #" , rma.fRecNumber as TPRSN,
+aa.fResCode , aa.fsta, aa.fVIMRes, aa.fRepairRes,RMA.fSta as RmaSta, RMA.fResCode as RMAResCode,
+aa.fLastID as LastID,to_timestamp(RR.fDate_Close::text,'YYYY-MM-dd HH24:MI:SS[.f...]') as Last_Closed_Date
+, RMA.ImportantNote, RMA_RR.ImportantNote as Last_ImportantNote
+,COALESCE(f1.DelayCategory, ii.DelayCategory) as DelayCategory
+,COALESCE(f1.DelayType, ii.DelayType) as DelayType,
+aa.EasyPlanDate as 排程日期
+from ods_wx_Item aa
+inner join ods_cj_rmaitem RMA on RMA.Id = aa.fItemid
+left outer join ods_ODM_RMA_ITEM PP on PP.id = aa.NewPanel_ID and PP.SvrCode = 202
+inner join ods_wx_ReturnTo_Base bb on RMA.fReturnTo = bb.ReturnTo AND CustomerCode in ('DELL', 'DELL ARB', 'DELL_PNA')
+left outer join ods_Holidays cc on RMA.fRptDate = to_date(cc.fsDate::text,'YYYY-MM-dd HH24:MI:SS[.f...]')
+left outer join ods_wx_Monitor dd on dd.fPN = aa.fpn
+--left outer join cj_code a1 on a1.FType = 56 and a1.FCode = dd.fmSta
+--left outer join wx_Disposition ee on ee.fwxID = aa.id
+left outer join ods_wx_Wait_master ff on ff.id = aa.fwaitid
+left outer join ods_cj_Delay_Mast f1 on ff.fWaitType = f1.fcode
+LEFT OUTER JOIN ods_cj_code a2 ON a2.FType = 22 AND a2.FParent = '7' AND a2.FCode = aa.fVIMRes
+left outer join ods_cj_panel_code a7 on a7.FType = 23 and a7.FParent = '1' and a7.FCode = PP.PanelRepairType
+left outer join ods_cj_code a3 on a3.FType = 41 and a3.FCode =aa.fsta
+left outer join ods_cj_code a4 on a4.FType = 41 and a4.FCode =aa.fNextSta
+left outer join ods_cj_code a5 on a5.FType = 7 and a5.FCode = RMA.fSta
+left outer join ods_cj_code a6 on a6.FType = 9 and a6.FCode = RMA.fResCode
+left outer join ods_wx_Item RR on RR.id = aa.fLastID
+left outer join ods_cj_rmaitem RMA_RR on RMA_RR.Id = RR.fItemid
+left outer join ods_cj_Test_mast GG ON GG.id = PP.TestID_FA
+left outer join ods_ODM_OnHold_Item hh on hh.id = PP.OnHoldID
+left outer join ods_Base_ODM_OnHold ii on hh.OnHoldType = ii.fcode
+
+where  aa.fsta not IN (-3,-5,34,39,49,59,69, 19,51,52,53)
+and RMA.fSta  >=0 --not in (-3, 29, 59)
+and RMA.fReturnTo in ('CJREPAIR',  'CJSPHL', 'ARBCJMON','CJINUSE')  --
+and aa.updatetime::date=(now() - interval '1 day')::date
+union all
+select distinct case when bb.CustomerCode = 'DELL ARB' then 'ARB' else 'XM' End AS AREA,
+pp.SvrCode as SvrCode, PP.id, cc.fym fym ,cc.fqm as fqm, cc.fmm fmm , cc.fwk fwm,
+rma.fReturnTo as RETURNTO_RMA, PP.Returnto as RETURNTO, bb.Commodity,
+RMA.fCon as Control, RMA.frma as RMA, PP.fpn as PN, PP.MonitorPPID AS PPID, pp.PPID as SN, -- rma.fSn
+a5.FCodeName as RMA_Status, a6.FCodeName as RMA_处理类型,
+a3.FCodeName Workstation,  a4.FCodeName as Next_Workstation, dd.Platform as Modal,
+case when dd.fsta in (6) THEN 'Safe Launch'  else 'NPI' end as "Model Status", --a1.FCodeName
+dd.Date_SafeLunch as Date_SafeLunch,RMA.Cdate as "RMA issue_Date",
+RMA.fRptDate as Receive_Date, to_date(null::text,'YYYY-MM-dd HH24:MI:SS[.f...]') as Start_Date,
+-1 as AgingDays,
+'' as Aging, --按区间分on way;0-5;6-10;11-19;20-29;30-60,>60
+'' as "Over due",  --TAT vs TAT goal；正常，即将超期，超期三种
+
+a2.FCodeName  Test_Result,
+PP.PanelRepairYN as Has_Repair,
+pp.Error_VMI "VMI Des.",
+case when PP.id > 0 then 'Y' else 'N' end  Panel_Reapir,  a7.FCodeName "Panel_Repair type",
+'' as NG_Reason,   '' as 故障原因,
+pp.IsOnhold  as  "Is_On hold",--case when ff.fsta = 0 then 'Y' else 'N' end
+f1.fCodeName as Delay_Type  ,
+ff.fDesc Delay_Reason,
+ff.fRemark Delay_Category,ff.Cdate as Submit_Date, ff.Date_Dis as Recover_Date,
+RMA.fRequestREF as RequestRef, dd.Platform as Platform,
+pp.ReturnTimes "Return times", rma.fSo as SO, RMA.fSt as "Service tag #" , rma.fRecNumber as TPRSN,
+PP.fResCode , PP.fsta,PP.fResult_VMI as fVIMRes,pp.fRescode as fRepairRes,RMA.fSta as RmaSta, RMA.fResCode as RMAResCode,
+PP.LastID as LastID, RR.Date_Closed as Last_Closed_Date
+, RMA.ImportantNote, RMA_RR.ImportantNote as Last_ImportantNote,
+f1.DelayCategory,f1.DelayType, pp.EasyPlanDate as 排程日期
+from ods_ODM_RMA_ITEM PP
+inner join ods_cj_rmaitem RMA on RMA.Id = PP.OLDSYS_ID
+inner join ods_wx_ReturnTo_Base bb on RMA.fReturnTo = bb.ReturnTo AND CustomerCode in ('DELL', 'DELL ARB', 'DELL_PNA')
+left outer join ods_Holidays cc on RMA.fRptDate = to_date(cc.fsDate::text,'YYYY-MM-dd HH24:MI:SS[.f...]')
+left outer join  ods_ODM_PN_TPanel dd on dd.fPN = PP.fpn  and dd.SvrCode = PP.SvrCode
+--left outer join cj_code a1 on a1.FType = 56 and a1.FCode = dd.fmSta
+--left outer join wx_Disposition ee on ee.fwxID = aa.id
+left outer join ods_ODM_OnHold_Item ff on ff.id = pp.OnHoldID
+left outer join ods_Base_ODM_OnHold f1 on ff.OnHoldType = f1.fcode
+LEFT OUTER JOIN ods_cj_panel_code a2 ON a2.FType = 23 AND a2.FParent = '0' AND a2.FCode = PP.fResult_VMI
+left outer join ods_cj_panel_code a7 on a7.FType = 23 and a7.FParent = '1' and a7.FCode = PP.PanelRepairType
+left outer join ods_cj_panel_code a3 on a3.FType = 7 and a3.FCode =PP.fsta
+left outer join ods_cj_panel_code a4 on a4.FType = 7 and a4.FCode =PP.fNextSta
+left outer join ods_cj_code a5 on a5.FType = 7 and a5.FCode = RMA.fSta
+left outer join ods_cj_code a6 on a6.FType = 9 and a6.FCode = RMA.fResCode
+left outer join ods_odm_rma_item RR on RR.id = PP.LastID
+left outer join ods_cj_rmaitem RMA_RR on RMA_RR.Id = RR.OLDSYS_ID
+where  PP.SvrCode in (205,218)
+ and Fn_ODM_isClosedSta(PP.fsta)=0
+ and RMA.fSta >=0 --not in (-3, 29, 59)
+ and PP.updatetime::date=(now() - interval '1 day')::date;
+
+INSERT INTO dwd_fact_Report_DELL_KPI_Item_WIP(area, svrcode, id, fym, fmm, fwm, returnto_rma,
+                                              returnto, commodity, control, rma, pn, ppid, sn,
+                                              rma_status, rma_处理类型,"Return times",requestref,
+                                              so,"Service tag #",trpsn,importantnote, "RMA issue_Date",
+                                              rmasta, rmarescode)
+select
+case when bb.CustomerCode = 'DELL ARB' then 'ARB' else 'XM' End AS AREA,
+bb.ServiceCode as SvrCode , aa.Id, null as fym, null fmm, null as fwm, aa.fReturnTo as Returnto_RMA,
+'' as Returnto, bb.Commodity, aa.fCon Control, aa.frma as RMA, aa.fPn PN,  fPPid as PPID, aa.fSn AS SN, 'OnWay' as Rma_Status,
+'' as RMA_处理类型,   aa.ftimes as "Return times", aa.fRequestREF as RequestRef,
+ aa.fso as SO, aa.fSt as "Service tag #", fRecNumber as TRPSN, aa.ImportantNote,
+aa.Cdate  as "RMA issue_Date", aa.fSta as RmaSta, aa.fResCode as RMAResCode
+from ods_cj_rmaitem aa
+inner join ods_wx_ReturnTo_Base bb on aa.fReturnTo = bb.ReturnTo
+  AND bb.CustomerCode in ('DELL', 'DELL ARB', 'DELL_PNA' )
+--left outer join cj_Holidays cc on CONVERT(date, cc.fdate) = CONVERT(date, aa.cdate)
+where aa.fSta = 0
+and  bb.Commodity in (SELECT  commodity FROM ods_commodity_color_aging_model where Area in ('XM', 'ARB'))
+and aa.updatetime::date=(now() - interval '1 day')::date;
+
+update dwd_fact_Report_DELL_KPI_Item_WIP
+set Start_date = cj_Get_StartDate(SvrCode, Receive_Date, Date_safelunch, null )
+    where Area in ('XM','ARB')
+      and updatetime::date=(now() - interval '1 day')::date;
+
+
+DROP TABLE IF EXISTS temp_AgingDays;
+CREATE TEMPORARY TABLE temp_AgingDays(id INT,AgingDays INT);
+INSERT INTO temp_AgingDays(ID, AgingDays)
+SELECT ID,AgingDays FROM
+(
+SELECT dfRDKIW.ID AS ID,COUNT(ho.id) AS AgingDays
+FROM ods_holidays ho,dwd_fact_Report_DELL_KPI_Item_WIP dfRDKIW
+WHERE (
+  dfRDKIW.updatetime::date=(now() - interval '1 day')::date
+  and ho.fdate between dfRDKIW.start_date and now()
+  and ho.fishday = FALSE
+  and dfRDKIW.Area in ('ARB', 'XM')
+  and dfRDKIW.updatetime::date=(now() - interval '1 day')::date
+    )
+GROUP BY dfRDKIW.ID
+) AS TMP;
+update dwd_fact_Report_DELL_KPI_Item_WIP dfRDKIW set (ID,AgingDays) =(
+		SELECT I.id,AgingDays FROM temp_AgingDays I WHERE dfRDKIW.ID = I.ID)
+		where EXISTS(SELECT temp_AgingDays.id FROM temp_AgingDays where temp_AgingDays.id=dfRDKIW.id)
+           and updatetime::date=(now() - interval '1 day')::date;
+select id,AgingDays,AREA,start_date from dwd_fact_Report_DELL_KPI_Item_WIP;
+
+
+update dwd_fact_Report_DELL_KPI_Item_WIP
+set Aging = Fn_AgingDayPer_KPI(AgingDays)
+where Area in ('XM','ARB')
+  and updatetime::date=(now() - interval '1 day')::date;
+
+update dwd_fact_Report_DELL_KPI_Item_WIP
+set (Last_Year_Code,Last_Quarter_Code,Last_Month_Code,Last_Week_Code,Days_RR,Is90RR)
+    = (bb.fym, bb.fqm,bb.fmm,bb.fwk,date_part('day', aa.Receive_Date-aa.Last_Closed_Date),
+       case when date_part('day', aa.Receive_Date-aa.Last_Closed_Date ) &lt;=90 then 'Y' else 'N' end)
+from dwd_fact_Report_DELL_KPI_Item_WIP aa
+inner join ods_holidays bb on aa.Last_Closed_Date::date = bb.fdate::date
+where aa.Area in ('XM','ARB')  and  aa.LastID > 0 and aa.Last_Closed_Date is not null
+and aa.updatetime::date=(now() - interval '1 day')::date;
+
+DELETE FROM dwd_fact_Report_DELL_KPI_Item_WIP
+    WHERE ID_FLAG in (SELECT a1.ID_FLAG  FROM dwd_fact_Report_DELL_KPI_Item_WIP a1,dwd_fact_Report_DELL_KPI_Item_WIP a2
+    where a1.Control=a2.Control and a1.updatetime&lt;a2.updatetime);</sql>
+      <useVariableSubstitution>F</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename />
+      <sendOneStatement>F</sendOneStatement>
+      <connection>mxdb</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>896</xloc>
+      <yloc>256</yloc>
+    </entry>
+    <entry>
+      <name>Scrap</name>
+      <description />
+      <type>SQL</type>
+      <sql>set enable_nestloop =off;
+INSERT INTO dwd_fact_Scrap (Order_ID, RmaID,Scrap_Con,date_scrap)
+SELECT scid,frma,fcon,fdate_scrap
+FROM ods_cj_rmaitem
+WHERE scid IS NOT NULL
+AND updatetime::date=(now() - interval '1 day')::date;
+select * from dwd_fact_Scrap;
+
+DELETE FROM dwd_fact_Scrap
+    WHERE ID in (SELECT a1.id  FROM dwd_fact_Scrap a1,dwd_fact_Scrap a2 where a1.Scrap_Con=a2.Scrap_Con and a1.updatetime&lt;a2.updatetime);
+</sql>
+      <useVariableSubstitution>F</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename />
+      <sendOneStatement>F</sendOneStatement>
+      <connection>mxdb</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>768</xloc>
+      <yloc>256</yloc>
+    </entry>
+    <entry>
+      <name>Sold_Out</name>
+      <description />
+      <type>SQL</type>
+      <sql>set enable_nestloop =off;
+INSERT INTO dwd_fact_Sold_Out (Order_ID, RmaID)
+SELECT id,frma FROM ods_cj_rmaitem
+</sql>
+      <useVariableSubstitution>F</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename />
+      <sendOneStatement>F</sendOneStatement>
+      <connection>mxdb</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>624</xloc>
+      <yloc>256</yloc>
+    </entry>
+    <entry>
+      <name>SR_Accountchecking</name>
+      <description />
+      <type>SQL</type>
+      <sql>set enable_nestloop =off;
+INSERT INTO dwd_fact_SR_Accountchecking (Order_ID, RmaID,Sr_Con,date_srcheck)
+SELECT srid,frma,fcon,fdate_sr
+FROM ods_cj_rmaitem
+where fdate_sr IS NOT NULL
+AND updatetime::date=(now() - interval '1 day')::date;
+
+DELETE FROM dwd_fact_SR_Accountchecking
+    WHERE id in (SELECT a1.id  FROM dwd_fact_SR_Accountchecking a1,dwd_fact_SR_Accountchecking a2
+    where a1.Sr_Con=a2.Sr_Con and a1.updatetime&lt;a2.updatetime);
+</sql>
+      <useVariableSubstitution>F</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename />
+      <sendOneStatement>F</sendOneStatement>
+      <connection>mxdb</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>464</xloc>
+      <yloc>256</yloc>
+    </entry>
+    <entry>
+      <name>SR_Shipment</name>
+      <description />
+      <type>SQL</type>
+      <sql>set enable_nestloop =off;
+INSERT INTO dwd_fact_SR_Shipment (Order_ID, RmaID, SH_Con, OEM_LocationID, date_sh)
+SELECT shid,frma,fcon,fsendto,fclosedate
+FROM ods_cj_rmaitem
+WHERE shid IS NOT NULL
+      AND updatetime::date=(now() - interval '1 day')::date;
+
+DELETE FROM dwd_fact_SR_Shipment
+    WHERE ID in (SELECT a1.id  FROM dwd_fact_SR_Shipment a1,dwd_fact_SR_Shipment a2
+    where a1.SH_Con=a2.SH_Con and a1.updatetime&lt;a2.updatetime);
+</sql>
+      <useVariableSubstitution>F</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename />
+      <sendOneStatement>F</sendOneStatement>
+      <connection>mxdb</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>336</xloc>
+      <yloc>256</yloc>
+    </entry>
+    <entry>
+      <name>Close_base_OrderDetail_1</name>
+      <description />
+      <type>SQL</type>
+      <sql>DROP VIEW IF EXISTS v_Screen_PN_Base;
+CREATE VIEW v_Screen_PN_Base
+AS
+SELECT   fpn AS PN, fOem AS OEM, fVer AS MSR, fModel AS Model, frmaclass, fremark AS fjk, '' AS CLASS, fsta, fdesc,
+fDate_Repair_Safe as Date_SafeLunch, -1 as Sta_ARB, null as Date_SafeLunch_ARB
+FROM ods_cj_odd_pn where updatetime::date=(now() - interval '1 day')::date
+UNION ALL
+SELECT     fpn AS PN, fOem AS OEM, fVer AS MSR, fModel AS Model, frmaclass, fjk AS fjk, fclass AS Class, fsta, fdesc,
+approveDate as Date_SafeLunch, -1 as Sta_ARB, null as Date_SafeLunch_ARB
+FROM         ods_cj_hdd_pn where updatetime::date=(now() - interval '1 day')::date
+UNION ALL
+SELECT     fpn AS PN, '' AS OEM, '' AS MSR, fmodel AS Model, frmaclass, hmu AS fjk, fclass AS Class, fsta, fCustDesc AS fdesc,
+fdate__safelunch as Date_SafeLunch, -1 as Sta_ARB, null as Date_SafeLunch_ARB
+FROM         ods_cj_cpu_pn where updatetime::date=(now() - interval '1 day')::date
+UNION ALL
+SELECT     fpn AS PN, fOem AS OEM, fmsrver AS MSR, fModel AS Model, frmaclass, Standard_Accessary_Material AS fjk, fclass AS Class, fsta, fdesc,
+fDate_Safe_Luanch  as Date_SafeLunch, -1 as Sta_ARB, null as Date_SafeLunch_ARB
+FROM         ods_cj_repair_model where updatetime::date=(now() - interval '1 day')::date
+UNION ALL
+SELECT     fpn AS PN, fOem AS OEM, fver AS MSR, fModel AS Model, frmaclass, MSR_ARB AS fjk, '' AS Class, fsta, fdesc,
+fDate_Repair_Safe as Date_SafeLunch, Sta_ARB, fDate_Repair_Safe_ARB Date_SafeLunch_ARB
+FROM         ods_cj_mb_pn where updatetime::date=(now() - interval '1 day')::date
+UNION ALL
+SELECT     fpn AS PN, fOem AS OEM, fver AS MSR, fModel AS Model, frmaclass, cardbus_type AS fjk, fclass AS Class, fsta, fdesc,
+ApproveDate  as Date_SafeLunch, -1 as Sta_ARB, null as Date_SafeLunch_ARB
+FROM         ods_cj_card_pn where updatetime::date=(now() - interval '1 day')::date
+UNION ALL
+SELECT     fpn AS PN, fOem AS OEM, fmsrver AS MSR, fModel AS Model, SvrCode as frmaclass, Platform AS fjk, Commodity AS Class, fsta, fdesc,
+fDate_Safe_Luanch  as Date_SafeLunch, -1 as Sta_ARB, null as Date_SafeLunch_ARB
+FROM         ods_base_pn_docking where updatetime::date=(now() - interval '1 day')::date;</sql>
+      <useVariableSubstitution>F</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename />
+      <sendOneStatement>F</sendOneStatement>
+      <connection>mxdb</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>176</xloc>
+      <yloc>160</yloc>
+    </entry>
+    <entry>
+      <name>RTHBTW_Apply</name>
+      <description />
+      <type>SQL</type>
+      <sql>set enable_nestloop =off;
+INSERT INTO dwd_fact_SR_Shipment (Order_ID, RmaID, SH_Con)
+SELECT rtid,frma,fcon FROM ods_cj_rmaitem WHERE shid IS NOT NULL ;</sql>
+      <useVariableSubstitution>F</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename />
+      <sendOneStatement>F</sendOneStatement>
+      <connection>mxdb</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>176</xloc>
+      <yloc>256</yloc>
+    </entry>
+    <entry>
+      <name>成功</name>
+      <description />
+      <type>SUCCESS</type>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>64</xloc>
+      <yloc>256</yloc>
+    </entry>
+  </entries>
+  <hops>
+    <hop>
+      <from>Close_monitor_OrderDetail</from>
+      <to>Close_panel_OrderDetail</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Close_panel_OrderDetail</from>
+      <to>OemRma_Apply</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>OemRma_Apply</from>
+      <to>OrderDetail</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>OrderDetail</from>
+      <to>OrderState</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>OrderState</from>
+      <to>Report_DELL_KPI_Item_WIP</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Report_DELL_KPI_Item_WIP</from>
+      <to>Scrap</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Scrap</from>
+      <to>Sold_Out</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Sold_Out</from>
+      <to>SR_Accountchecking</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SR_Accountchecking</from>
+      <to>SR_Shipment</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Close_base_OrderDetail_1</from>
+      <to>Close_base_OrderDetail_2</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>START</from>
+      <to>Close_base_OrderDetail_1</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Close_base_OrderDetail_2</from>
+      <to>business_shunt</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>business_shunt</from>
+      <to>Close_monitor_OrderDetail</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SR_Shipment</from>
+      <to>RTHBTW_Apply</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>RTHBTW_Apply</from>
+      <to>成功</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+  </hops>
+  <notepads>
+  </notepads>
+  <attributes>
+    <group>
+      <name>METASTORE.pentaho</name>
+      <attribute>
+        <key>Default Run Configuration</key>
+        <value>{"namespace":"pentaho","id":"Default Run Configuration","name":"Default Run Configuration","description":"Defines a default run configuration","metaStoreName":null}</value>
+      </attribute>
+    </group>
+    <group>
+      <name>{"_":"Embedded MetaStore Elements","namespace":"pentaho","type":"Default Run Configuration"}</name>
+      <attribute>
+        <key>Pentaho local</key>
+        <value>{"children":[{"children":[],"id":"server","value":null},{"children":[],"id":"clustered","value":"N"},{"children":[],"id":"name","value":"Pentaho local"},{"children":[],"id":"description","value":null},{"children":[],"id":"readOnly","value":"Y"},{"children":[],"id":"sendResources","value":"N"},{"children":[],"id":"logRemoteExecutionLocally","value":"N"},{"children":[],"id":"remote","value":"N"},{"children":[],"id":"local","value":"Y"},{"children":[],"id":"showTransformations","value":"N"}],"id":"Pentaho local","value":null,"name":"Pentaho local","owner":null,"ownerPermissionsList":[]}</value>
+      </attribute>
+    </group>
+  </attributes>
+</job>

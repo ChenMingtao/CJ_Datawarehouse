@@ -1,0 +1,3172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>transport_ods_wx_disposition</name>
+    <description />
+    <extended_description />
+    <trans_version />
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection />
+        <schema />
+        <table />
+        <size_limit_lines />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject />
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection />
+        <schema />
+        <table />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection />
+      <table />
+      <field />
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file />
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2021/06/03 13:22:25.487</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2021/06/03 13:22:25.487</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>matrixdb</name>
+    <server>192.168.133.122</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>cj_datawarehouse</database>
+    <port>5432</port>
+    <username>mxadmin</username>
+    <password>Encrypted 2be98c2a91ed59b9caf1bff228dc6fa8c</password>
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>sqlserver</name>
+    <server>192.168.133.230</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>cj_tprdb</database>
+    <port>1433</port>
+    <username>Matrix_001</username>
+    <password>Encrypted 2be98afc86ae3b091b81cbc508cc2fd8b</password>
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>EXTRA_OPTION_MSSQL.instance</code>
+        <attribute>sqlserver</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>1433</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>Input-SQLSERVER</from>
+      <to>Input-数据排序</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Output-Matrixdb</from>
+      <to>Output-数据排序</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Input-数据排序</from>
+      <to>合并记录</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Output-数据排序</from>
+      <to>合并记录</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>合并记录</from>
+      <to>Switch / Case</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Switch / Case</from>
+      <to>缓冲</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>缓冲</from>
+      <to>表输出目标表</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Switch / Case</from>
+      <to>更新</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Switch / Case</from>
+      <to>删除</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Switch / Case</from>
+      <to>空操作</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>执行SQL脚本</from>
+      <to>Input-SQLSERVER</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>Input-SQLSERVER</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>sqlserver</connection>
+    <sql>SELECT
+  id
+, fsta
+, fwxID
+, IQC
+, VI
+, QT1
+, BIOS
+, ECO
+, QT2
+, FCT
+, FT
+, QT3
+, Disposition
+, Disposition2
+, fErrDesc
+, fFailReason
+, fAction
+, fErrCode
+, fFailReasonCode
+, cDate
+, fDate_Disposition
+, fBGADateCode
+, FP_Error_Code
+, FP_Error_Discription
+, TestStep
+, fFailType
+, Component_Removed_Description1
+, Component_Removed_Vendor1
+, Component_Removed_Vendor_Part_Number1
+, Component_Removed_Reference_Designator1
+, Repair_Associated_Module1
+, Component_Removed_Description2
+, Component_Removed_Vendor2
+, Component_Removed_Vendor_Part_Number2
+, Component_Removed_Reference_Designator2
+, Repair_Associated_Module2
+, Component_Removed_Description3
+, Component_Removed_Vendor3
+, Component_Removed_Vendor_Part_Number3
+, Component_Removed_Reference_Designator3
+, Repair_Associated_Module3
+, Scrap
+, Panel_ODM
+, "Failure Type"
+, Repair_Attempts
+, Quick_Test_Count
+, Functional_Test_count
+, Run_In_count
+, Final_Test_count
+, OBA_count
+, "Components Causing Scrap"
+, "BID Count"
+FROM wx_Disposition
+</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>208</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Input-数据排序</name>
+    <type>SortRows</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>3000000</sort_size>
+    <free_memory />
+    <compress>N</compress>
+    <compress_variable />
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>id</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>fsta</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>fwxID</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>IQC</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>VI</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>QT1</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>BIOS</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>ECO</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>QT2</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>FCT</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>FT</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>QT3</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Disposition</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Disposition2</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>fErrDesc</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>fFailReason</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>fAction</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>fErrCode</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>fFailReasonCode</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>cDate</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>fDate_Disposition</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>fBGADateCode</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>FP_Error_Code</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>FP_Error_Discription</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>TestStep</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>fFailType</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Component_Removed_Description1</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Component_Removed_Vendor1</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Component_Removed_Vendor_Part_Number1</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Component_Removed_Reference_Designator1</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Repair_Associated_Module1</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Component_Removed_Description2</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Component_Removed_Vendor2</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Component_Removed_Vendor_Part_Number2</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Component_Removed_Reference_Designator2</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Repair_Associated_Module2</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Component_Removed_Description3</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Component_Removed_Vendor3</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Component_Removed_Vendor_Part_Number3</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Component_Removed_Reference_Designator3</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Repair_Associated_Module3</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Scrap</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Panel_ODM</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Failure Type</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Repair_Attempts</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Quick_Test_Count</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Functional_Test_count</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Run_In_count</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Final_Test_count</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>OBA_count</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Components Causing Scrap</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>BID Count</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>400</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Output-Matrixdb</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>matrixdb</connection>
+    <sql>SELECT
+  id
+, fsta
+, fwxid
+, iqc
+, vi
+, qt1
+, bios
+, eco
+, qt2
+, fct
+, ft
+, qt3
+, disposition
+, disposition2
+, ferrdesc
+, ffailreason
+, faction
+, ferrcode
+, ffailreasoncode
+, cdate
+, fdate_disposition
+, fbgadatecode
+, fp_error_code
+, fp_error_discription
+, teststep
+, ffailtype
+, component_removed_description1
+, component_removed_vendor1
+, component_removed_vendor_part_number1
+, component_removed_reference_designator1
+, repair_associated_module1
+, component_removed_description2
+, component_removed_vendor2
+, component_removed_vendor_part_number2
+, component_removed_reference_designator2
+, repair_associated_module2
+, component_removed_description3
+, component_removed_vendor3
+, component_removed_vendor_part_number3
+, component_removed_reference_designator3
+, repair_associated_module3
+, scrap
+, panel_odm
+, "Failure Type"
+, repair_attempts
+, quick_test_count
+, functional_test_count
+, run_in_count
+, final_test_count
+, oba_count
+, "Components Causing Scrap"
+, "BID Count"
+FROM ods_wx_disposition
+</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>208</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Output-数据排序</name>
+    <type>SortRows</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>3000000</sort_size>
+    <free_memory />
+    <compress>N</compress>
+    <compress_variable />
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>id</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>fsta</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>fwxid</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>iqc</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>vi</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>qt1</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>bios</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>eco</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>qt2</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>fct</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>ft</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>qt3</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>disposition</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>disposition2</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>ferrdesc</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>ffailreason</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>faction</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>ferrcode</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>ffailreasoncode</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>cdate</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>fdate_disposition</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>fbgadatecode</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>fp_error_code</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>fp_error_discription</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>teststep</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>ffailtype</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>component_removed_description1</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>component_removed_vendor1</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>component_removed_vendor_part_number1</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>component_removed_reference_designator1</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>repair_associated_module1</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>component_removed_description2</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>component_removed_vendor2</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>component_removed_vendor_part_number2</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>component_removed_reference_designator2</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>repair_associated_module2</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>component_removed_description3</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>component_removed_vendor3</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>component_removed_vendor_part_number3</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>component_removed_reference_designator3</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>repair_associated_module3</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>scrap</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>panel_odm</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Failure Type</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>repair_attempts</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>quick_test_count</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>functional_test_count</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>run_in_count</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>final_test_count</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>oba_count</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Components Causing Scrap</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>BID Count</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>400</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Switch / Case</name>
+    <type>SwitchCase</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fieldname>flagfield</fieldname>
+    <use_contains>Y</use_contains>
+    <case_value_type>String</case_value_type>
+    <case_value_format />
+    <case_value_decimal />
+    <case_value_group />
+    <default_target_step />
+    <cases>
+      <case>
+        <value>new</value>
+        <target_step>缓冲</target_step>
+      </case>
+      <case>
+        <value>changed</value>
+        <target_step>更新</target_step>
+      </case>
+      <case>
+        <value>deleted</value>
+        <target_step>删除</target_step>
+      </case>
+      <case>
+        <value>identical</value>
+        <target_step>空操作</target_step>
+      </case>
+    </cases>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>736</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>删除</name>
+    <type>Delete</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>matrixdb</connection>
+    <commit>3000000</commit>
+    <lookup>
+      <schema />
+      <table>ods_wx_disposition</table>
+      <key>
+        <name>id</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>fsta</name>
+        <field>fsta</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>fwxid</name>
+        <field>fwxid</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>iqc</name>
+        <field>iqc</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>vi</name>
+        <field>vi</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>qt1</name>
+        <field>qt1</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>bios</name>
+        <field>bios</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>eco</name>
+        <field>eco</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>qt2</name>
+        <field>qt2</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>fct</name>
+        <field>fct</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>ft</name>
+        <field>ft</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>qt3</name>
+        <field>qt3</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>disposition</name>
+        <field>disposition</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>disposition2</name>
+        <field>disposition2</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>ferrdesc</name>
+        <field>ferrdesc</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>ffailreason</name>
+        <field>ffailreason</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>faction</name>
+        <field>faction</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>ferrcode</name>
+        <field>ferrcode</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>ffailreasoncode</name>
+        <field>ffailreasoncode</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>cdate</name>
+        <field>cdate</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>fdate_disposition</name>
+        <field>fdate_disposition</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>fbgadatecode</name>
+        <field>fbgadatecode</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>fp_error_code</name>
+        <field>fp_error_code</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>fp_error_discription</name>
+        <field>fp_error_discription</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>teststep</name>
+        <field>teststep</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>ffailtype</name>
+        <field>ffailtype</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>component_removed_description1</name>
+        <field>component_removed_description1</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>component_removed_vendor1</name>
+        <field>component_removed_vendor1</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>component_removed_vendor_part_number1</name>
+        <field>component_removed_vendor_part_number1</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>component_removed_reference_designator1</name>
+        <field>component_removed_reference_designator1</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>repair_associated_module1</name>
+        <field>repair_associated_module1</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>component_removed_description2</name>
+        <field>component_removed_description2</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>component_removed_vendor2</name>
+        <field>component_removed_vendor2</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>component_removed_vendor_part_number2</name>
+        <field>component_removed_vendor_part_number2</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>component_removed_reference_designator2</name>
+        <field>component_removed_reference_designator2</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>repair_associated_module2</name>
+        <field>repair_associated_module2</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>component_removed_description3</name>
+        <field>component_removed_description3</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>component_removed_vendor3</name>
+        <field>component_removed_vendor3</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>component_removed_vendor_part_number3</name>
+        <field>component_removed_vendor_part_number3</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>component_removed_reference_designator3</name>
+        <field>component_removed_reference_designator3</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>repair_associated_module3</name>
+        <field>repair_associated_module3</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>scrap</name>
+        <field>scrap</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>panel_odm</name>
+        <field>panel_odm</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>Failure Type</name>
+        <field>"Failure Type"</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>repair_attempts</name>
+        <field>repair_attempts</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>quick_test_count</name>
+        <field>quick_test_count</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>functional_test_count</name>
+        <field>functional_test_count</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>run_in_count</name>
+        <field>run_in_count</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>final_test_count</name>
+        <field>final_test_count</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>oba_count</name>
+        <field>oba_count</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>Components Causing Scrap</name>
+        <field>"Components Causing Scrap"</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>BID Count</name>
+        <field>"BID Count"</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+    </lookup>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1056</xloc>
+      <yloc>336</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>合并记录</name>
+    <type>MergeRows</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <keys>
+      <key>id</key>
+      <key>fsta</key>
+      <key>fwxid</key>
+      <key>iqc</key>
+      <key>vi</key>
+      <key>qt1</key>
+      <key>bios</key>
+      <key>eco</key>
+      <key>qt2</key>
+      <key>fct</key>
+      <key>ft</key>
+      <key>qt3</key>
+      <key>disposition</key>
+      <key>disposition2</key>
+      <key>ferrdesc</key>
+      <key>ffailreason</key>
+      <key>faction</key>
+      <key>ferrcode</key>
+      <key>ffailreasoncode</key>
+      <key>cdate</key>
+      <key>fdate_disposition</key>
+      <key>fbgadatecode</key>
+      <key>fp_error_code</key>
+      <key>fp_error_discription</key>
+      <key>teststep</key>
+      <key>ffailtype</key>
+      <key>component_removed_description1</key>
+      <key>component_removed_vendor1</key>
+      <key>component_removed_vendor_part_number1</key>
+      <key>component_removed_reference_designator1</key>
+      <key>repair_associated_module1</key>
+      <key>component_removed_description2</key>
+      <key>component_removed_vendor2</key>
+      <key>component_removed_vendor_part_number2</key>
+      <key>component_removed_reference_designator2</key>
+      <key>repair_associated_module2</key>
+      <key>component_removed_description3</key>
+      <key>component_removed_vendor3</key>
+      <key>component_removed_vendor_part_number3</key>
+      <key>component_removed_reference_designator3</key>
+      <key>repair_associated_module3</key>
+      <key>scrap</key>
+      <key>panel_odm</key>
+      <key>Failure Type</key>
+      <key>repair_attempts</key>
+      <key>quick_test_count</key>
+      <key>functional_test_count</key>
+      <key>run_in_count</key>
+      <key>final_test_count</key>
+      <key>oba_count</key>
+      <key>Components Causing Scrap</key>
+      <key>BID Count</key>
+    </keys>
+    <values>
+      <value>id</value>
+      <value>fsta</value>
+      <value>fwxid</value>
+      <value>iqc</value>
+      <value>vi</value>
+      <value>qt1</value>
+      <value>bios</value>
+      <value>eco</value>
+      <value>qt2</value>
+      <value>fct</value>
+      <value>ft</value>
+      <value>qt3</value>
+      <value>disposition</value>
+      <value>disposition2</value>
+      <value>ferrdesc</value>
+      <value>ffailreason</value>
+      <value>faction</value>
+      <value>ferrcode</value>
+      <value>ffailreasoncode</value>
+      <value>cdate</value>
+      <value>fdate_disposition</value>
+      <value>fbgadatecode</value>
+      <value>fp_error_code</value>
+      <value>fp_error_discription</value>
+      <value>teststep</value>
+      <value>ffailtype</value>
+      <value>component_removed_description1</value>
+      <value>component_removed_vendor1</value>
+      <value>component_removed_vendor_part_number1</value>
+      <value>component_removed_reference_designator1</value>
+      <value>repair_associated_module1</value>
+      <value>component_removed_description2</value>
+      <value>component_removed_vendor2</value>
+      <value>component_removed_vendor_part_number2</value>
+      <value>component_removed_reference_designator2</value>
+      <value>repair_associated_module2</value>
+      <value>component_removed_description3</value>
+      <value>component_removed_vendor3</value>
+      <value>component_removed_vendor_part_number3</value>
+      <value>component_removed_reference_designator3</value>
+      <value>repair_associated_module3</value>
+      <value>scrap</value>
+      <value>panel_odm</value>
+      <value>Failure Type</value>
+      <value>repair_attempts</value>
+      <value>quick_test_count</value>
+      <value>functional_test_count</value>
+      <value>run_in_count</value>
+      <value>final_test_count</value>
+      <value>oba_count</value>
+      <value>Components Causing Scrap</value>
+      <value>BID Count</value>
+    </values>
+    <flag_field>flagfield</flag_field>
+    <reference>Output-数据排序</reference>
+    <compare>Input-数据排序</compare>
+    <compare>
+    </compare>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>624</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>更新</name>
+    <type>Update</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>matrixdb</connection>
+    <skip_lookup>N</skip_lookup>
+    <commit>3000000</commit>
+    <use_batch>Y</use_batch>
+    <error_ignored>N</error_ignored>
+    <ignore_flag_field />
+    <lookup>
+      <schema />
+      <table>ods_wx_disposition</table>
+      <key>
+        <name>id</name>
+        <field>id</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>fsta</name>
+        <field>fsta</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>fwxid</name>
+        <field>fwxid</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>iqc</name>
+        <field>iqc</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>vi</name>
+        <field>vi</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>qt1</name>
+        <field>qt1</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>bios</name>
+        <field>bios</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>eco</name>
+        <field>eco</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>qt2</name>
+        <field>qt2</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>fct</name>
+        <field>fct</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>ft</name>
+        <field>ft</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>qt3</name>
+        <field>qt3</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>disposition</name>
+        <field>disposition</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>disposition2</name>
+        <field>disposition2</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>ferrdesc</name>
+        <field>ferrdesc</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>ffailreason</name>
+        <field>ffailreason</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>faction</name>
+        <field>faction</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>ferrcode</name>
+        <field>ferrcode</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>ffailreasoncode</name>
+        <field>ffailreasoncode</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>cdate</name>
+        <field>cdate</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>fdate_disposition</name>
+        <field>fdate_disposition</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>fbgadatecode</name>
+        <field>fbgadatecode</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>fp_error_code</name>
+        <field>fp_error_code</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>fp_error_discription</name>
+        <field>fp_error_discription</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>teststep</name>
+        <field>teststep</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>ffailtype</name>
+        <field>ffailtype</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>component_removed_description1</name>
+        <field>component_removed_description1</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>component_removed_vendor1</name>
+        <field>component_removed_vendor1</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>component_removed_vendor_part_number1</name>
+        <field>component_removed_vendor_part_number1</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>component_removed_reference_designator1</name>
+        <field>component_removed_reference_designator1</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>repair_associated_module1</name>
+        <field>repair_associated_module1</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>component_removed_description2</name>
+        <field>component_removed_description2</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>component_removed_vendor2</name>
+        <field>component_removed_vendor2</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>component_removed_vendor_part_number2</name>
+        <field>component_removed_vendor_part_number2</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>component_removed_reference_designator2</name>
+        <field>component_removed_reference_designator2</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>repair_associated_module2</name>
+        <field>repair_associated_module2</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>component_removed_description3</name>
+        <field>component_removed_description3</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>component_removed_vendor3</name>
+        <field>component_removed_vendor3</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>component_removed_vendor_part_number3</name>
+        <field>component_removed_vendor_part_number3</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>component_removed_reference_designator3</name>
+        <field>component_removed_reference_designator3</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>repair_associated_module3</name>
+        <field>repair_associated_module3</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>scrap</name>
+        <field>scrap</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>panel_odm</name>
+        <field>panel_odm</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>Failure Type</name>
+        <field>"Failure Type"</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>repair_attempts</name>
+        <field>repair_attempts</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>quick_test_count</name>
+        <field>quick_test_count</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>functional_test_count</name>
+        <field>functional_test_count</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>run_in_count</name>
+        <field>run_in_count</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>final_test_count</name>
+        <field>final_test_count</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>oba_count</name>
+        <field>oba_count</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>Components Causing Scrap</name>
+        <field>"Components Causing Scrap"</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>BID Count</name>
+        <field>"BID Count"</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <key>
+        <name>flagfield</name>
+        <field>flagfield</field>
+        <condition>=</condition>
+        <name2 />
+      </key>
+      <value>
+        <name>id</name>
+        <rename>id</rename>
+      </value>
+      <value>
+        <name>fsta</name>
+        <rename>fsta</rename>
+      </value>
+      <value>
+        <name>fwxid</name>
+        <rename>fwxid</rename>
+      </value>
+      <value>
+        <name>iqc</name>
+        <rename>iqc</rename>
+      </value>
+      <value>
+        <name>vi</name>
+        <rename>vi</rename>
+      </value>
+      <value>
+        <name>qt1</name>
+        <rename>qt1</rename>
+      </value>
+      <value>
+        <name>bios</name>
+        <rename>bios</rename>
+      </value>
+      <value>
+        <name>eco</name>
+        <rename>eco</rename>
+      </value>
+      <value>
+        <name>qt2</name>
+        <rename>qt2</rename>
+      </value>
+      <value>
+        <name>fct</name>
+        <rename>fct</rename>
+      </value>
+      <value>
+        <name>ft</name>
+        <rename>ft</rename>
+      </value>
+      <value>
+        <name>qt3</name>
+        <rename>qt3</rename>
+      </value>
+      <value>
+        <name>disposition</name>
+        <rename>disposition</rename>
+      </value>
+      <value>
+        <name>disposition2</name>
+        <rename>disposition2</rename>
+      </value>
+      <value>
+        <name>ferrdesc</name>
+        <rename>ferrdesc</rename>
+      </value>
+      <value>
+        <name>ffailreason</name>
+        <rename>ffailreason</rename>
+      </value>
+      <value>
+        <name>faction</name>
+        <rename>faction</rename>
+      </value>
+      <value>
+        <name>ferrcode</name>
+        <rename>ferrcode</rename>
+      </value>
+      <value>
+        <name>ffailreasoncode</name>
+        <rename>ffailreasoncode</rename>
+      </value>
+      <value>
+        <name>cdate</name>
+        <rename>cdate</rename>
+      </value>
+      <value>
+        <name>fdate_disposition</name>
+        <rename>fdate_disposition</rename>
+      </value>
+      <value>
+        <name>fbgadatecode</name>
+        <rename>fbgadatecode</rename>
+      </value>
+      <value>
+        <name>fp_error_code</name>
+        <rename>fp_error_code</rename>
+      </value>
+      <value>
+        <name>fp_error_discription</name>
+        <rename>fp_error_discription</rename>
+      </value>
+      <value>
+        <name>teststep</name>
+        <rename>teststep</rename>
+      </value>
+      <value>
+        <name>ffailtype</name>
+        <rename>ffailtype</rename>
+      </value>
+      <value>
+        <name>component_removed_description1</name>
+        <rename>component_removed_description1</rename>
+      </value>
+      <value>
+        <name>component_removed_vendor1</name>
+        <rename>component_removed_vendor1</rename>
+      </value>
+      <value>
+        <name>component_removed_vendor_part_number1</name>
+        <rename>component_removed_vendor_part_number1</rename>
+      </value>
+      <value>
+        <name>component_removed_reference_designator1</name>
+        <rename>component_removed_reference_designator1</rename>
+      </value>
+      <value>
+        <name>repair_associated_module1</name>
+        <rename>repair_associated_module1</rename>
+      </value>
+      <value>
+        <name>component_removed_description2</name>
+        <rename>component_removed_description2</rename>
+      </value>
+      <value>
+        <name>component_removed_vendor2</name>
+        <rename>component_removed_vendor2</rename>
+      </value>
+      <value>
+        <name>component_removed_vendor_part_number2</name>
+        <rename>component_removed_vendor_part_number2</rename>
+      </value>
+      <value>
+        <name>component_removed_reference_designator2</name>
+        <rename>component_removed_reference_designator2</rename>
+      </value>
+      <value>
+        <name>repair_associated_module2</name>
+        <rename>repair_associated_module2</rename>
+      </value>
+      <value>
+        <name>component_removed_description3</name>
+        <rename>component_removed_description3</rename>
+      </value>
+      <value>
+        <name>component_removed_vendor3</name>
+        <rename>component_removed_vendor3</rename>
+      </value>
+      <value>
+        <name>component_removed_vendor_part_number3</name>
+        <rename>component_removed_vendor_part_number3</rename>
+      </value>
+      <value>
+        <name>component_removed_reference_designator3</name>
+        <rename>component_removed_reference_designator3</rename>
+      </value>
+      <value>
+        <name>repair_associated_module3</name>
+        <rename>repair_associated_module3</rename>
+      </value>
+      <value>
+        <name>scrap</name>
+        <rename>scrap</rename>
+      </value>
+      <value>
+        <name>panel_odm</name>
+        <rename>panel_odm</rename>
+      </value>
+      <value>
+        <name>"Failure Type"</name>
+        <rename>Failure Type</rename>
+      </value>
+      <value>
+        <name>repair_attempts</name>
+        <rename>repair_attempts</rename>
+      </value>
+      <value>
+        <name>quick_test_count</name>
+        <rename>quick_test_count</rename>
+      </value>
+      <value>
+        <name>functional_test_count</name>
+        <rename>functional_test_count</rename>
+      </value>
+      <value>
+        <name>run_in_count</name>
+        <rename>run_in_count</rename>
+      </value>
+      <value>
+        <name>final_test_count</name>
+        <rename>final_test_count</rename>
+      </value>
+      <value>
+        <name>oba_count</name>
+        <rename>oba_count</rename>
+      </value>
+      <value>
+        <name>"Components Causing Scrap"</name>
+        <rename>Components Causing Scrap</rename>
+      </value>
+      <value>
+        <name>"BID Count"</name>
+        <rename>BID Count</rename>
+      </value>
+    </lookup>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1056</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>空操作</name>
+    <type>Dummy</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>736</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>缓冲</name>
+    <type>Dummy</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>736</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>表输出目标表</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>matrixdb</connection>
+    <schema />
+    <table>ods_wx_disposition</table>
+    <commit>3000000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+      <field>
+        <column_name>id</column_name>
+        <stream_name>id</stream_name>
+      </field>
+      <field>
+        <column_name>fsta</column_name>
+        <stream_name>fsta</stream_name>
+      </field>
+      <field>
+        <column_name>fwxid</column_name>
+        <stream_name>fwxid</stream_name>
+      </field>
+      <field>
+        <column_name>iqc</column_name>
+        <stream_name>iqc</stream_name>
+      </field>
+      <field>
+        <column_name>vi</column_name>
+        <stream_name>vi</stream_name>
+      </field>
+      <field>
+        <column_name>qt1</column_name>
+        <stream_name>qt1</stream_name>
+      </field>
+      <field>
+        <column_name>bios</column_name>
+        <stream_name>bios</stream_name>
+      </field>
+      <field>
+        <column_name>eco</column_name>
+        <stream_name>eco</stream_name>
+      </field>
+      <field>
+        <column_name>qt2</column_name>
+        <stream_name>qt2</stream_name>
+      </field>
+      <field>
+        <column_name>fct</column_name>
+        <stream_name>fct</stream_name>
+      </field>
+      <field>
+        <column_name>ft</column_name>
+        <stream_name>ft</stream_name>
+      </field>
+      <field>
+        <column_name>qt3</column_name>
+        <stream_name>qt3</stream_name>
+      </field>
+      <field>
+        <column_name>disposition</column_name>
+        <stream_name>disposition</stream_name>
+      </field>
+      <field>
+        <column_name>disposition2</column_name>
+        <stream_name>disposition2</stream_name>
+      </field>
+      <field>
+        <column_name>ferrdesc</column_name>
+        <stream_name>ferrdesc</stream_name>
+      </field>
+      <field>
+        <column_name>ffailreason</column_name>
+        <stream_name>ffailreason</stream_name>
+      </field>
+      <field>
+        <column_name>faction</column_name>
+        <stream_name>faction</stream_name>
+      </field>
+      <field>
+        <column_name>ferrcode</column_name>
+        <stream_name>ferrcode</stream_name>
+      </field>
+      <field>
+        <column_name>ffailreasoncode</column_name>
+        <stream_name>ffailreasoncode</stream_name>
+      </field>
+      <field>
+        <column_name>cdate</column_name>
+        <stream_name>cdate</stream_name>
+      </field>
+      <field>
+        <column_name>fdate_disposition</column_name>
+        <stream_name>fdate_disposition</stream_name>
+      </field>
+      <field>
+        <column_name>fbgadatecode</column_name>
+        <stream_name>fbgadatecode</stream_name>
+      </field>
+      <field>
+        <column_name>fp_error_code</column_name>
+        <stream_name>fp_error_code</stream_name>
+      </field>
+      <field>
+        <column_name>fp_error_discription</column_name>
+        <stream_name>fp_error_discription</stream_name>
+      </field>
+      <field>
+        <column_name>teststep</column_name>
+        <stream_name>teststep</stream_name>
+      </field>
+      <field>
+        <column_name>ffailtype</column_name>
+        <stream_name>ffailtype</stream_name>
+      </field>
+      <field>
+        <column_name>component_removed_description1</column_name>
+        <stream_name>component_removed_description1</stream_name>
+      </field>
+      <field>
+        <column_name>component_removed_vendor1</column_name>
+        <stream_name>component_removed_vendor1</stream_name>
+      </field>
+      <field>
+        <column_name>component_removed_vendor_part_number1</column_name>
+        <stream_name>component_removed_vendor_part_number1</stream_name>
+      </field>
+      <field>
+        <column_name>component_removed_reference_designator1</column_name>
+        <stream_name>component_removed_reference_designator1</stream_name>
+      </field>
+      <field>
+        <column_name>repair_associated_module1</column_name>
+        <stream_name>repair_associated_module1</stream_name>
+      </field>
+      <field>
+        <column_name>component_removed_description2</column_name>
+        <stream_name>component_removed_description2</stream_name>
+      </field>
+      <field>
+        <column_name>component_removed_vendor2</column_name>
+        <stream_name>component_removed_vendor2</stream_name>
+      </field>
+      <field>
+        <column_name>component_removed_vendor_part_number2</column_name>
+        <stream_name>component_removed_vendor_part_number2</stream_name>
+      </field>
+      <field>
+        <column_name>component_removed_reference_designator2</column_name>
+        <stream_name>component_removed_reference_designator2</stream_name>
+      </field>
+      <field>
+        <column_name>repair_associated_module2</column_name>
+        <stream_name>repair_associated_module2</stream_name>
+      </field>
+      <field>
+        <column_name>component_removed_description3</column_name>
+        <stream_name>component_removed_description3</stream_name>
+      </field>
+      <field>
+        <column_name>component_removed_vendor3</column_name>
+        <stream_name>component_removed_vendor3</stream_name>
+      </field>
+      <field>
+        <column_name>component_removed_vendor_part_number3</column_name>
+        <stream_name>component_removed_vendor_part_number3</stream_name>
+      </field>
+      <field>
+        <column_name>component_removed_reference_designator3</column_name>
+        <stream_name>component_removed_reference_designator3</stream_name>
+      </field>
+      <field>
+        <column_name>repair_associated_module3</column_name>
+        <stream_name>repair_associated_module3</stream_name>
+      </field>
+      <field>
+        <column_name>scrap</column_name>
+        <stream_name>scrap</stream_name>
+      </field>
+      <field>
+        <column_name>panel_odm</column_name>
+        <stream_name>panel_odm</stream_name>
+      </field>
+      <field>
+        <column_name>"Failure Type"</column_name>
+        <stream_name>Failure Type</stream_name>
+      </field>
+      <field>
+        <column_name>repair_attempts</column_name>
+        <stream_name>repair_attempts</stream_name>
+      </field>
+      <field>
+        <column_name>quick_test_count</column_name>
+        <stream_name>quick_test_count</stream_name>
+      </field>
+      <field>
+        <column_name>functional_test_count</column_name>
+        <stream_name>functional_test_count</stream_name>
+      </field>
+      <field>
+        <column_name>run_in_count</column_name>
+        <stream_name>run_in_count</stream_name>
+      </field>
+      <field>
+        <column_name>final_test_count</column_name>
+        <stream_name>final_test_count</stream_name>
+      </field>
+      <field>
+        <column_name>oba_count</column_name>
+        <stream_name>oba_count</stream_name>
+      </field>
+      <field>
+        <column_name>"Components Causing Scrap"</column_name>
+        <stream_name>Components Causing Scrap</stream_name>
+      </field>
+      <field>
+        <column_name>"BID Count"</column_name>
+        <stream_name>BID Count</stream_name>
+      </field>
+    </fields>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>912</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>执行SQL脚本</name>
+    <type>ExecSQL</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>sqlserver</connection>
+    <execute_each_row>Y</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>USE cj_tprdb
+GO
+SET NOCOUNT ON
+ DECLARE @TblName  VARCHAR(100)
+ DECLARE @UpdateString NVARCHAR(1000)
+ DECLARE @SelectString NVARCHAR(1000)
+ DECLARE @COlName VARCHAR(100)
+ DECLARE @COUNT  INT
+ SET @TblName = 'wx_Disposition'--指定想要修改的表名
+ --定义游标取出指定表内的数据类型是VARCHAR,char,nVARCHAR的字段名称
+ DECLARE cur_ColName  CURSOR
+ FOR
+ SELECT col.name
+ FROM syscolumns AS col
+ inner join sysobjects  AS obj  ON col.ID = obj.ID 
+ INNER join systypes  AS typ  ON col.xtype = typ.xtype
+ WHERE obj.xtype ='U'
+ AND obj.name = @TblName
+ AND typ.name IN ('VARCHAR','CHAR','NVARCHAR','NCHAR')
+ FOR READ ONLY
+ --打开游标
+ OPEN cur_ColName
+ FETCH NEXT FROM cur_ColName INTO @ColName
+ IF @@FETCH_STATUS&lt;&gt;0
+ BEGIN 
+ PRINT '没有对应表或字段，'PRINT '请确认当前数据库内有' + @TblName + '表，' PRINT '或该表内有VARCHAR、CHAR、NVARCHAR、NCHAR类型的字段！' GOTO LABCLOSE
+ END--循环修改
+ WHILE @@FETCH_STATUS=0
+ BEGIN 
+ --拼修改字符串 
+ --去掉左边的不可见字符 
+ SET @SelectString = 'SELECT @COU=COUNT(*)     
+ FROM ' + @TblName +'    
+ WHERE ASCII(LEFT(' + @ColName +',1))&lt;32
+ AND '+ @ColName + ' IS NOT NULL' 
+ EXEC sp_executesql @SelectString,N'@COU INT OUTPUT',
+ @COUNT OUTPUT WHILE @COUNT>0 
+ BEGIN  
+ SET @UpdateString =   
+ ' UPDATE ' + @TblName +   
+ ' SET ' + @ColName + '=RIGHT(' + @ColName + ',LEN(' + @ColName + ')-1)    
+ WHERE ASCII(LEFT(' + @ColName + ',1))&lt;32    
+ AND ' + @ColName + ' IS NOT NULL'  
+ EXEC sp_executesql @UpdateString  
+ EXEC sp_executesql @SelectString,N'@COU INT OUTPUT',@COUNT OUTPUT 
+ END 
+ --去掉右边的不可见字符 
+ SET @SelectString = 'SELECT @COU=COUNT(*)     
+ FROM ' + @TblName +'    
+ WHERE ASCII(RIGHT(' + @ColName +',1))&lt;32    
+ AND '+ @ColName + ' IS NOT NULL' 
+ EXEC sp_executesql @SelectString,N'@COU INT OUTPUT',
+ @COUNT OUTPUT WHILE @COUNT>0 
+ BEGIN  
+ SET @UpdateString =   ' UPDATE ' + @TblName +   ' SET ' 
+ + @ColName + '=LEFT(' + @ColName + ',LEN(' + @ColName + ')-1)    
+ WHERE ASCII(RIGHT(' + @ColName + ',1))&lt;32    
+ AND ' + @ColName + ' IS NOT NULL'  
+ EXEC SP_EXECUTESQL @UpdateString  
+ EXEC sp_executesql @SelectString,N'@COU INT OUTPUT',
+ @COUNT OUTPUT 
+ END 
+ PRINT 'column: ' + @ColName + '－－－ok' 
+ FETCH NEXT FROM cur_ColName INTO @ColName
+ END
+ --关闭、释放游标
+ LABCLOSE: CLOSE cur_ColName  
+ DEALLOCATE cur_ColName
+ GO
+</sql>
+    <set_params>N</set_params>
+    <insert_field />
+    <update_field />
+    <delete_field />
+    <read_field />
+    <arguments>
+    </arguments>
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+</transformation>
